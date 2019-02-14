@@ -14,7 +14,6 @@ def recur(maze, isVisited, i, j, path, result):
 		path.append([i, j])
 		for p in path:
 			result.append(p)
-		# print(result)
 		return ;
 	# Add the postion in to path.
 	path.append([i, j])
@@ -26,7 +25,6 @@ def recur(maze, isVisited, i, j, path, result):
 		newJ = j + dy[round]
 		recur(maze, isVisited, newI, newJ, path, result)
 
-	isVisited[i][j] = 0
 	path.pop(len(path) - 1)
 
 """The DFS algorithm."""
@@ -38,7 +36,6 @@ def dfs(maze):
 	path = []
 	result = []
 	recur(maze, isVisited, 0, 0, path, result)
-
 	return result
 
 """The BFS algorithm"""
@@ -61,10 +58,13 @@ def bfs(maze):
 	return False
 
 if __name__ == "__main__":
-	maze = [[0,0,0,0],
-			[0,1,1,0],
+	# maze = np.load('./maze/4x4_0.5.npy')
+	# for i in range(len(maze)):
+	# 	print(maze[i])
+	maze = [[0,1,1,1],
+			[0,0,1,0],
 			[0,0,0,1],
-			[0,1,0,0]]
-	print(dfs(maze))
+			[1,1,0,0]]
+	print(bfs(maze))
 
 
