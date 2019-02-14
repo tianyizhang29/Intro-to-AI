@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04490bcc-58a9-46bc-9a69-43e067a77d2b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Introduction to AI.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment1/aStarED.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +33,8 @@
       <file leaf-file-name="aStarED.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment1/aStarED.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-405">
-              <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+            <state relative-caret-position="15">
+              <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -87,12 +93,6 @@
               <item name="Introduction to AI" type="b2602c69:ProjectViewProjectNode" />
               <item name="Introduction to AI" type="462c0819:PsiDirectoryNode" />
               <item name="Assignment1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Introduction to AI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Introduction to AI" type="462c0819:PsiDirectoryNode" />
-              <item name="Assignment1" type="462c0819:PsiDirectoryNode" />
-              <item name="maze" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Introduction to AI" type="b2602c69:ProjectViewProjectNode" />
@@ -265,8 +265,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment1/aStarED.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        <state relative-caret-position="15">
+          <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
