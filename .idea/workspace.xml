@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="04490bcc-58a9-46bc-9a69-43e067a77d2b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/aStarED.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/aStarED.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/aStarED.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/algorithms/aStarED.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/aStarMD.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/algorithms/aStarMD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/maze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/maze/4x4_0.5.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/mazeFile/4x4_0.5.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/pathfinding.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/algorithms/pathfinding.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +21,8 @@
       <file leaf-file-name="maze.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assignment1/maze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -26,10 +31,10 @@
         </entry>
       </file>
       <file leaf-file-name="pathfinding.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assignment1/pathfinding.py">
+        <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/pathfinding.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+            <state relative-caret-position="856">
+              <caret line="76" column="13" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -43,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aStarED.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assignment1/aStarED.py">
+      <file leaf-file-name="aStarED.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarED.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="123" column="44" lean-forward="true" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+            <state relative-caret-position="601">
+              <caret line="127" column="21" lean-forward="true" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -55,8 +60,17 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="testMaze.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assignment1/testMaze.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="aStarMD.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assignment1/aStarMD.py">
+        <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarMD.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
               <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
@@ -84,6 +98,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>print</find>
@@ -97,6 +118,8 @@
       <list>
         <option value="$PROJECT_DIR$/Assignment1/aStarMD.py" />
         <option value="$PROJECT_DIR$/Assignment1/aStarED.py" />
+        <option value="$PROJECT_DIR$/Assignment1/maze.py" />
+        <option value="$PROJECT_DIR$/Assignment1/testMaze.py" />
       </list>
     </option>
   </component>
@@ -104,6 +127,9 @@
     <option name="x" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -141,6 +167,10 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Rutgers\Course\Introduction to AI\Assignment1" />
+      <recent name="E:\Rutgers\Course\Introduction to AI\Assignment1\algorithms" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Rutgers\Course\Introduction to AI\Assignment1" />
     </key>
@@ -170,7 +200,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Assignment1/aStarED.py" />
+      <option name="SCRIPT_NAME" value="E:\Rutgers\Course\Introduction to AI\Assignment1\algorithms\aStarED.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,7 +218,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Assignment1/aStarMD.py" />
+      <option name="SCRIPT_NAME" value="E:\Rutgers\Course\Introduction to AI\Assignment1\algorithms\aStarMD.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -206,7 +236,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Assignment1/pathfinding.py" />
+      <option name="SCRIPT_NAME" value="E:\Rutgers\Course\Introduction to AI\Assignment1\algorithms\pathfinding.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -249,16 +279,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952926" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32952926" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32952926" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32952926" />
       <window_info anchor="bottom" id="Version Control" weight="0.32952926" />
       <window_info anchor="bottom" id="Python Console" weight="0.32952926" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" weight="0.24821684" />
+      <window_info anchor="bottom" id="Terminal" weight="0.2853067" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.35235378" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -302,7 +333,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Assignment1/aStarED.py</url>
+          <url>file://$PROJECT_DIR$/Assignment1/algorithms/aStarED.py</url>
           <line>120</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
@@ -330,19 +361,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment1/aStarMD.py">
+    <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarMD.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment1/maze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -353,20 +375,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment1/pathfinding.py">
+    <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarED.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment1/aStarED.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="123" column="44" lean-forward="true" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+        <state relative-caret-position="601">
+          <caret line="127" column="21" lean-forward="true" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/pathfinding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="856">
+          <caret line="76" column="13" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment1/maze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment1/testMaze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
         </state>
       </provider>
     </entry>

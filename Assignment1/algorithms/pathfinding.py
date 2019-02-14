@@ -29,7 +29,7 @@ def recur(maze, isVisited, i, j, path, result):
 
 """The DFS algorithm."""
 def dfs(maze):
-	# Create a matrix which label the visited point in maze.
+	# Create a matrix which label the visited point in mazeFile.
 	isVisited = np.zeros((len(maze), len(maze[0])))
 
 	# Create the path and execute the recursize process.
@@ -67,9 +67,9 @@ def bfs(maze):
 	return path
 
 if __name__ == "__main__":
-	# maze = np.load('./maze/4x4_0.5.npy')
-	# for i in range(len(maze)):
-	# 	print(maze[i])
+	# mazeFile = np.load('./mazeFile/4x4_0.5.npy')
+	# for i in range(len(mazeFile)):
+	# 	print(mazeFile[i])
 	maze = [[0,1,1,1],
 			[0,0,1,0],
 			[0,0,0,1],
@@ -77,4 +77,4 @@ if __name__ == "__main__":
 	print(bfs(maze))
 
 
-# i* len(maze[0]) + j 2 * 4 + 3 = 11
+# i* len(mazeFile[0]) + j 2 * 4 + 3 = 11

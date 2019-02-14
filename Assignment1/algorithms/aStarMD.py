@@ -28,15 +28,15 @@ class Point():
 
 class aStar():
     # def __init__(self, file):
-    #     #read maze file
-    #     maze = np.load(file)
-    #     self.maze = maze
-    #     self.dim = maze.shape[0]
+    #     #read mazeFile file
+    #     mazeFile = np.load(file)
+    #     self.mazeFile = mazeFile
+    #     self.dim = mazeFile.shape[0]
     #     self.open_list = []
     #     self.close_list = []
 
     def __init__(self, maze):
-        #read maze file
+        #read mazeFile file
         self.maze = maze
         self.dim = len(maze[0])
         self.open_list = []
