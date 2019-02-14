@@ -133,7 +133,7 @@ class aStar():
 if __name__ == "__main__":
     maze = [[0,1,1,1],
             [0,0,1,0],
-            [0,0,1,1],
+            [0,0,0,1],
             [1,1,0,0]]
     test = aStar(maze= maze)
     aStar.find_path(test)
