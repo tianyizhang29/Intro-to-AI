@@ -40,8 +40,10 @@ def dfs(maze):
 
 """The BFS algorithm"""
 def bfs(maze):
+	path = []
 	isVisited = np.zeros((len(maze), len(maze[0])))
 	queue = [[0, 0]]
+	dict = {}
 	while len(queue) > 0:
 		size = len(queue)
 		for i in range(size):
@@ -50,12 +52,19 @@ def bfs(maze):
 				newI = pos[0] + dx[round]
 				newJ = pos[1] + dy[round]
 				if newI == len(maze) - 1 and newJ == len(maze[0]) - 1:
-					return True
+					dict[newI * len(maze[0]) + newJ] = pos[0] * len(maze[0]) + pos[1]
+					curPos = len(maze) * len(maze[0]) - 1
+					while curPos != 0:
+						path.append([curPos // len(maze[0]), curPos % len(maze[0])])
+						curPos = dict[curPos];
+					path.append([0,0])
+					path.reverse()
+					return path
 				if(newI >= 0 and newI < len(maze) and newJ >= 0 and newJ < len(maze) and maze[newI][newJ] == 0 and isVisited[newI][newJ] == 0):
+					dict[newI * len(maze[0]) + newJ] = pos[0] * len(maze[0]) + pos[1]
 					queue.append([newI, newJ])
 					maze[newI][newJ] = 1
-	
-	return False
+	return path
 
 if __name__ == "__main__":
 	# maze = np.load('./maze/4x4_0.5.npy')
@@ -68,3 +77,4 @@ if __name__ == "__main__":
 	print(bfs(maze))
 
 
+# i* len(maze[0]) + j 2 * 4 + 3 = 11
