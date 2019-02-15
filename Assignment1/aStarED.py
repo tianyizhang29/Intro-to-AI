@@ -111,7 +111,7 @@ class aStar():
 
             point = self.endPointInClose()
             if point:
-                self.printPath(point)
+                # self.printPath(point)
                 break
             elif len(self.open_list) == 0:
                 return print('Could Not Find Path!')
