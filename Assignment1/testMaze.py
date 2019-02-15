@@ -33,7 +33,9 @@ while repeate_times > 0:
     matrix = maze.generate_maze(dim, p)
     astar = ased.aStar(matrix)
     start = time.time()
-    path = astar.find_path()
+    hasPath = astar.find_path()
+    if not hasPath:
+        continue
     end = time.time()
     t = end - start
     print(str(dim) + '---->' + str(t))
@@ -45,7 +47,3 @@ plt.plot(dims, times)
 plt.xlabel('dim')
 plt.ylabel('time')
 plt.show()
-# if len(path) < dim * 2 - 1 or path[len(path) - 1][0] != dim - 1 or path[len(path) - 1][1] != dim - 1:
-#     print('No valid path')
-# else:
-#     print(str(dim) + ': ' + str(t))
