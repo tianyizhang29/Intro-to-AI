@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04490bcc-58a9-46bc-9a69-43e067a77d2b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/aStarED.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/algorithms/aStarED.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/aStarMD.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/algorithms/aStarMD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/maze.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/maze/4x4_0.5.npy" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/mazeFile/4x4_0.5.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/pathfinding.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/algorithms/pathfinding.py" afterDir="false" />
-    </list>
+    <list default="true" id="04490bcc-58a9-46bc-9a69-43e067a77d2b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +56,8 @@
       <file leaf-file-name="testMaze.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment1/testMaze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -279,7 +272,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952926" />
@@ -289,7 +281,7 @@
       <window_info anchor="bottom" id="Version Control" weight="0.32952926" />
       <window_info anchor="bottom" id="Python Console" weight="0.32952926" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" weight="0.2853067" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.28388017" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.35235378" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -404,8 +396,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment1/testMaze.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
