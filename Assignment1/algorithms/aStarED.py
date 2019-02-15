@@ -42,8 +42,8 @@ class aStar():
         self.open_list = []
         self.close_list = []
 
-    def cal_Manhattan(self, x, y):
-        distance  = abs(self.dim - x) + abs(self.dim - y)
+    def cal_Euclidean(self, x, y):
+        distance  = math.sqrt((self.dim - 1 - x) ** 2 + (self.dim - 1 - y) ** 2)
         return distance
 
     def in_open_list(self, point):
@@ -65,7 +65,7 @@ class aStar():
         # check barrier; if there is a barrier just jump it
         if self.maze[minF.x + offsetX][minF.y + offsetY] == 1:
             return
-        current_h = self.cal_Manhattan(minF.x + offsetX, minF.y + offsetY)
+        current_h = self.cal_Euclidean(minF.x + offsetX, minF.y + offsetY)
         currentPoint  = Point(minF, minF.x + offsetX, minF.y + offsetY, current_h)
         # Check if it's visited before
         if self.in_close_list(currentPoint) is not None:
@@ -95,7 +95,7 @@ class aStar():
 
     def find_path(self):
         # create startNode and Add to pq and visited dict
-        h = self.cal_Manhattan(0,0)
+        h = self.cal_Euclidean(0,0)
         startNode = Point(None, 0, 0, h)
         self.open_list.append(startNode)
 
@@ -111,10 +111,10 @@ class aStar():
 
             point = self.endPointInClose()
             if point:
-                self.printPath(point)
-                break
+                # self.printPath(point)
+                return True
             elif len(self.open_list) == 0:
-                return print('Could Not Find Path!')
+                return False
 
     def printPath(self, endPoint):
         path = []

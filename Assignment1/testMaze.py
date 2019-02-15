@@ -1,5 +1,4 @@
-import pathfinding as pf
-import aStarED as ased
+from algorithms import aStarED as ased
 import maze
 import time
 import matplotlib.pyplot as plt
