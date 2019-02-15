@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import maze
 import numpy as np
 
-times = 100
+times = 1000
 dim = 8
 step_length = 0.02
 p = np.arange(0.1, 0.9, step_length)
@@ -24,6 +24,9 @@ for j in p:
     passRate.append(passCount / times)
 passRate = np.array(passRate)
 # passRate = np.load("./result/1bfs.npy")
+plt.xlabel('density')
+plt.ylabel('solvability')
+plt.title('density VS solvability')
 plt.plot(p, passRate)
 plt.show()
 

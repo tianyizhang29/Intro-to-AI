@@ -5,15 +5,15 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 
-repeate_times = 50
+times = 50
 
 print(5/8)
-dims = np.arange(52, 53, 1)
-p = np.arange(0.1, 0.6, 0.1)
+dims = np.arange(45, 53, 1)
+p = np.arange(0.3, 0.6, 0.1)
 passRate = []
 for i in dims:
     for j in p:
-        repeate_times = 10
+        repeate_times = times
         passCount = 0
         print('dims: ' + str(i))
         print('p: ' + str(j))
@@ -21,14 +21,14 @@ for i in dims:
             matrix = maze.generate_maze(i, j)
             astar = ased.aStar(matrix)
             hasPath = astar.find_path()
-            if not hasPath:
-                continue
-            passCount += 1
+            if hasPath:
+                passCount += 1
             repeate_times -= 1
-        passRate.append(passCount / 10)
-        print(passCount / 10)
+        passRate.append(passCount / times)
+
+# plot the 3D figure
 passRate = np.array(passRate)
-passRate = np.reshape(passRate, (5, 1))
+passRate = np.reshape(passRate, (len(p), len(dims)))
 dims, p = np.meshgrid(dims, p)
 fig = plt.figure()
 ax = Axes3D(fig)
