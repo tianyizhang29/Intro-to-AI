@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 import maze
 import numpy as np
 
-times = 50
+times = 100
 dim = 8
-step_length = 0.05
-p = np.arange(0.2, 0.8, step_length)
+step_length = 0.02
+p = np.arange(0.1, 0.9, step_length)
 passRate = []
 for j in p:
     repeate_times = times
@@ -17,11 +17,13 @@ for j in p:
         astar = ased.aStar(matrix)
         hasPath = astar.find_path()
         if not hasPath:
+            repeate_times -= 1
             continue
         passCount += 1
         repeate_times -= 1
     passRate.append(passCount / times)
 passRate = np.array(passRate)
+# passRate = np.load("./result/1bfs.npy")
 plt.plot(p, passRate)
 plt.show()
 
