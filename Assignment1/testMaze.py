@@ -2,11 +2,38 @@ from algorithms import aStarED as ased
 import maze
 import time
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
 
 repeate_times = 50
-dim = 3
-p = 0.2
 
+print(5/8)
+dims = np.arange(3, 13, 1)
+p = np.arange(0.1, 0.6, 0.1)
+passRate = []
+for i in dims:
+    for j in p:
+        repeate_times = 50
+        passCount = 0
+        print('dims: ' + str(i))
+        print('p: ' + str(j))
+        while repeate_times > 0:
+            matrix = maze.generate_maze(i, j)
+            astar = ased.aStar(matrix)
+            hasPath = astar.find_path()
+            if not hasPath:
+                continue
+            passCount += 1
+            repeate_times -= 1
+        passRate.append(passCount / 50)
+        print(passCount / 50)
+print(passRate)
+passRate = np.array(passRate)
+passRate = np.reshape(passRate, (10, 5))
+print(passRate)
+fig = plt.figure()
+ax = Axes3D(fig)
+ax.plot_surface(dims, p, passRate, rstride=1, cstride=1, cmap='rainbow')
 # Beacause of the top left and bottom right position are the start point and end point. So the size of 
 # maze should larger than 2. The smallest size should be 3. In this experiment, we would like to try 20
 # times, setting the repeat time with 20. Test the execution time of DFS algorithm.
@@ -27,23 +54,3 @@ p = 0.2
 #     print(str(dim) + ': ' + str(t))
 #     repeate_times -= 1
 #     dim += 1
-dims = []
-times = []
-while repeate_times > 0:
-    matrix = maze.generate_maze(dim, p)
-    astar = ased.aStar(matrix)
-    start = time.time()
-    hasPath = astar.find_path()
-    if not hasPath:
-        continue
-    end = time.time()
-    t = end - start
-    print(str(dim) + '---->' + str(t))
-    repeate_times -= 1
-    dim += 1
-    dims.append(dim)
-    times.append(t)
-plt.plot(dims, times)
-plt.xlabel('dim')
-plt.ylabel('time')
-plt.show()

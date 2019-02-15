@@ -51,7 +51,7 @@ def bfs(maze):
 			for round in range(4):
 				newI = pos[0] + dx[round]
 				newJ = pos[1] + dy[round]
-				if newI == len(maze) - 1 and newJ == len(maze[0]) - 1:
+				if newI == len(maze) - 1 and newJ == len(maze[0]) - 1 and maze[newI][newJ] == 0:
 					dict[newI * len(maze[0]) + newJ] = pos[0] * len(maze[0]) + pos[1]
 					curPos = len(maze) * len(maze[0]) - 1
 					while curPos != 0:
@@ -73,5 +73,5 @@ if __name__ == "__main__":
 	maze = [[0,1,1,1],
 			[0,0,1,0],
 			[0,0,0,1],
-			[1,1,0,0]]
+			[1,1,0,1]]
 	print(bfs(maze))
