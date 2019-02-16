@@ -1,5 +1,7 @@
 import numpy as np
-
+import sys
+sys.path.append("..")
+import maze
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
@@ -14,7 +16,7 @@ def recur(maze, isVisited, i, j, path, result):
 		path.append([i, j])
 		for p in path:
 			result.append(p)
-		return ;
+		return True
 	# Add the postion in to path.
 	path.append([i, j])
 	isVisited[i][j] = 1
@@ -23,7 +25,9 @@ def recur(maze, isVisited, i, j, path, result):
 	for round in range(4):
 		newI = i + dx[round]
 		newJ = j + dy[round]
-		recur(maze, isVisited, newI, newJ, path, result)
+		isReach = recur(maze, isVisited, newI, newJ, path, result)
+		if isReach:
+			return True
 
 	path.pop(len(path) - 1)
 
@@ -63,15 +67,12 @@ def bfs(maze):
 				if(newI >= 0 and newI < len(maze) and newJ >= 0 and newJ < len(maze) and maze[newI][newJ] == 0 and isVisited[newI][newJ] == 0):
 					dict[newI * len(maze[0]) + newJ] = pos[0] * len(maze[0]) + pos[1]
 					queue.append([newI, newJ])
-					maze[newI][newJ] = 1
+					isVisited[newI][newJ] = 1
 	return path
 
 if __name__ == "__main__":
 	# mazeFile = np.load('./mazeFile/4x4_0.5.npy')
 	# for i in range(len(mazeFile)):
 	# 	print(mazeFile[i])
-	maze = [[0,1,1,1],
-			[0,0,1,0],
-			[0,0,0,1],
-			[1,1,0,1]]
-	print(bfs(maze))
+	matrix = maze.generate_maze(8, 0.2)
+	print(dfs(matrix))
