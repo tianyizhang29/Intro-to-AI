@@ -5,9 +5,8 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 
-times = 50
+times = 10000
 
-print(5/8)
 dims = np.arange(45, 53, 1)
 p = np.arange(0.3, 0.6, 0.1)
 passRate = []
@@ -37,20 +36,3 @@ plt.show()
 # Beacause of the top left and bottom right position are the start point and end point. So the size of 
 # maze should larger than 2. The smallest size should be 3. In this experiment, we would like to try 20
 # times, setting the repeat time with 20. Test the execution time of DFS algorithm.
-
-# while repeate_times > 0:
-#     matrix = maze.generate_maze(dim, p)
-#     start = datetime.datetime.now()
-#     path = pf.dfs(matrix)
-#     print(len(path))
-#     end = datetime.datetime.now()
-#     t = end - start
-#     while len(path) < dim * 2 - 1 or path[len(path) - 1][0] != dim - 1 or path[len(path) - 1][1] != dim - 1:
-#         matrix = maze.generate_maze(dim, p)
-#         start = datetime.datetime.now()
-#         path = pf.dfs(matrix)
-#         end = datetime.datetime.now()
-#         t = end - start
-#     print(str(dim) + ': ' + str(t))
-#     repeate_times -= 1
-#     dim += 1
