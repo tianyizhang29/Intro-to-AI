@@ -111,7 +111,7 @@ class aStar():
 
             point = self.endPointInClose()
             if point:
-                # self.printPath(point)
+                self.printPath(point)
                 return True
             elif len(self.open_list) == 0:
                 return False
@@ -136,6 +136,6 @@ if __name__ == "__main__":
             [0,0,0,1],
             [1,1,0,0]]
     test = aStar(maze= maze)
-    aStar.find_path(test)
+    test.find_path()
 
 
