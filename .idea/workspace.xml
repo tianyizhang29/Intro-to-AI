@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="04490bcc-58a9-46bc-9a69-43e067a77d2b" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Assignment1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment1/maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/maze.py" afterDir="false" />
 =======
@@ -13,6 +14,11 @@
       <change beforePath="$PROJECT_DIR$/Assignment1/pathfinding.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/algorithms/pathfinding.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment1/testMaze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/testMaze.py" afterDir="false" />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/algorithms/aStarED.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/algorithms/aStarED.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/maze/preplexMaze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/maze/preplexMaze.py" afterDir="false" />
+>>>>>>> testBranch
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,6 +30,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> testBranch
       <file leaf-file-name="testMaze.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assignment1/testMaze.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -32,6 +41,7 @@
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
+<<<<<<< HEAD
 =======
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
@@ -44,16 +54,22 @@
             <state relative-caret-position="4620">
               <caret line="308" selection-start-line="308" selection-end-line="308" />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+>>>>>>> testBranch
             </state>
           </provider>
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> testBranch
       <file leaf-file-name="q23.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assignment1/q23.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
               <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+<<<<<<< HEAD
 =======
       <file leaf-file-name="_pydev_execfile.py" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
@@ -61,15 +77,21 @@
             <state relative-caret-position="255">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+>>>>>>> testBranch
             </state>
           </provider>
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> testBranch
       <file leaf-file-name="pathfinding.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/pathfinding.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="403">
+<<<<<<< HEAD
               <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
 =======
       <file leaf-file-name="maze.py" pinned="false" current-in-tab="false">
@@ -81,15 +103,22 @@
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+              <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+>>>>>>> testBranch
             </state>
           </provider>
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> testBranch
       <file leaf-file-name="aStarMD.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarMD.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="740">
+<<<<<<< HEAD
               <caret line="114" column="27" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="27" />
 =======
       <file leaf-file-name="aStarMD.py" pinned="false" current-in-tab="true">
@@ -98,6 +127,9 @@
             <state relative-caret-position="117">
               <caret line="117" selection-start-line="117" selection-end-line="117" />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+              <caret line="114" column="27" lean-forward="true" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="27" />
+>>>>>>> testBranch
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -106,13 +138,32 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="aStarED.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarED.py">
+=======
+      <file leaf-file-name="aStarED.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarED.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="133" selection-start-line="133" selection-end-line="133" />
+            <state relative-caret-position="289">
+              <caret line="135" selection-start-line="135" selection-end-line="138" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#62#607#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="preplexMaze.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assignment1/maze/preplexMaze.py">
+>>>>>>> testBranch
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+<<<<<<< HEAD
                 <element signature="e#62#607#0" />
 =======
       <file leaf-file-name="aStarED.py" pinned="false" current-in-tab="false">
@@ -123,20 +174,26 @@
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+>>>>>>> testBranch
               </folding>
             </state>
           </provider>
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> testBranch
       <file leaf-file-name="maze.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assignment1/maze.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
+<<<<<<< HEAD
 =======
       <file leaf-file-name="npyio.py" pinned="false" current-in-tab="false">
         <entry file="file://E:/Python/64/Lib/site-packages/numpy/lib/npyio.py">
@@ -144,6 +201,8 @@
             <state relative-caret-position="142">
               <caret line="369" selection-start-line="369" selection-end-line="369" />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+>>>>>>> testBranch
             </state>
           </provider>
         </entry>
@@ -172,6 +231,8 @@
         <option value="$PROJECT_DIR$/Assignment1/testMaze.py" />
         <option value="$PROJECT_DIR$/Assignment1/aStarED.py" />
         <option value="$PROJECT_DIR$/Assignment1/aStarMD.py" />
+        <option value="$PROJECT_DIR$/Assignment1/algorithms/aStarED.py" />
+        <option value="$PROJECT_DIR$/Assignment1/maze/preplexMaze.py" />
       </list>
     </option>
   </component>
@@ -206,6 +267,9 @@
               <item name="Introduction to AI" type="462c0819:PsiDirectoryNode" />
               <item name="Assignment1" type="462c0819:PsiDirectoryNode" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> testBranch
               <item name="algorithms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -213,9 +277,12 @@
               <item name="Introduction to AI" type="462c0819:PsiDirectoryNode" />
               <item name="Assignment1" type="462c0819:PsiDirectoryNode" />
               <item name="maze" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
 =======
               <item name="mazeFile" type="462c0819:PsiDirectoryNode" />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+>>>>>>> testBranch
             </path>
             <path>
               <item name="Introduction to AI" type="b2602c69:ProjectViewProjectNode" />
@@ -235,11 +302,11 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Rutgers\Course\Introduction to AI\Assignment1" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Rutgers\Course\Introduction to AI\Assignment1\algorithms" />
+      <recent name="E:\Rutgers\Course\Introduction to AI\Assignment1" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Rutgers\Course\Introduction to AI\Assignment1" />
     </key>
   </component>
@@ -255,7 +322,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.aStarED">
+  <component name="RunManager" selected="Python.aStarED (1)">
+    <configuration name="aStarED (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Introduction to AI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Assignment1/algorithms" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Assignment1/algorithms/aStarED.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="aStarED" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Introduction to AI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -310,13 +395,35 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="preplexMaze" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Introduction to AI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Assignment1/maze" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Assignment1/maze/preplexMaze.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
       <item itemvalue="Python.aStarED" />
       <item itemvalue="Python.aStarMD" />
       <item itemvalue="Python.pathfinding" />
+      <item itemvalue="Python.preplexMaze" />
+      <item itemvalue="Python.aStarED (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.aStarED (1)" />
+        <item itemvalue="Python.preplexMaze" />
         <item itemvalue="Python.aStarED" />
         <item itemvalue="Python.pathfinding" />
         <item itemvalue="Python.aStarMD" />
@@ -348,36 +455,30 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> testBranch
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3005284" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3005284" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952926" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952926" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32952926" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32952926" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29957205" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26105565" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4336662" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4336662" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3751783" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35235378" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32952926" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32952926" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26105565" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.11982881" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.35235378" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32952926" />
       <window_info anchor="bottom" id="Messages" order="7" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32952926" />
 =======
     <layout>
@@ -401,6 +502,8 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952926" />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+>>>>>>> testBranch
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,12 +539,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Assignment1/maze/preplexMaze.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Assignment1/algorithms/aStarED.py</url>
-          <line>120</line>
-          <option name="timeStamp" value="18" />
+          <line>140</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -451,6 +559,7 @@
   </component>
   <component name="editorHistoryManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-1736114344/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -459,60 +568,46 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarED.py">
+=======
+    <entry file="file://$PROJECT_DIR$/Assignment1/result/1bfs.npy">
+>>>>>>> testBranch
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="132" column="25" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#62#607#0" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment1/result/q21/3d_dims.npy" />
-    <entry file="file://$PROJECT_DIR$/Assignment1/q26.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment1/testFunc/save.py" />
-    <entry file="file://$PROJECT_DIR$/Assignment1/q24.py">
+    <entry file="file://E:/Python/64/Lib/site-packages/numpy/core/fromnumeric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment1/q23.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="142">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment1/maze.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        <state relative-caret-position="75">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/pathfinding.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment1/testFunc/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/Assignment1/3d.py" />
+    <entry file="file://$PROJECT_DIR$/Assignment1/result/q21/3d_p.npy" />
     <entry file="file://$PROJECT_DIR$/Assignment1/testMaze.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        <state relative-caret-position="150">
+          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarMD.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="740">
@@ -546,6 +641,8 @@
     </entry>
 =======
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+>>>>>>> testBranch
     <entry file="file://$PROJECT_DIR$/Assignment1/maze.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -562,10 +659,14 @@
           <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <element signature="e#0#38#0" expanded="true" />
 =======
             <marker date="1550200856071" expanded="true" signature="106:111" ph="..." />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+            <element signature="e#0#38#0" expanded="true" />
+>>>>>>> testBranch
           </folding>
         </state>
       </provider>
@@ -625,9 +726,13 @@
           <folding>
             <element signature="e#0#11#0" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
             <element signature="e#62#607#0" />
 =======
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+            <element signature="e#62#607#0" />
+>>>>>>> testBranch
           </folding>
         </state>
       </provider>
@@ -702,22 +807,30 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assignment1/mazeFile/10000x10000_0.5.npy" />
 =======
     <entry file="file://$PROJECT_DIR$/Assignment1/mazeFile/10000x10000_0.5.npy">
       <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+    <entry file="file://$PROJECT_DIR$/Assignment1/mazeFile/10000x10000_0.5.npy" />
+>>>>>>> testBranch
     <entry file="file://$PROJECT_DIR$/Assignment1/testMaze.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <element signature="e#0#38#0" expanded="true" />
 =======
             <marker date="1550200856071" expanded="true" signature="106:111" ph="..." />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+            <element signature="e#0#38#0" expanded="true" />
+>>>>>>> testBranch
           </folding>
         </state>
       </provider>
@@ -729,9 +842,13 @@
           <folding>
             <element signature="e#0#11#0" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
             <element signature="e#62#607#0" />
 =======
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+            <element signature="e#62#607#0" />
+>>>>>>> testBranch
           </folding>
         </state>
       </provider>
@@ -744,12 +861,16 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assignment1/mazeFile/30x30_0.5.npy" />
 =======
     <entry file="file://$PROJECT_DIR$/Assignment1/mazeFile/30x30_0.5.npy">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+    <entry file="file://$PROJECT_DIR$/Assignment1/mazeFile/30x30_0.5.npy" />
+>>>>>>> testBranch
     <entry file="file://$PROJECT_DIR$/Assignment1/maze.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -802,9 +923,40 @@
           <folding>
             <element signature="e#0#11#0" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
             <element signature="e#62#607#0" />
 =======
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+            <element signature="e#62#607#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment1/result/q21/3d_dims.npy" />
+    <entry file="file://$PROJECT_DIR$/Assignment1/q26.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment1/testFunc/save.py" />
+    <entry file="file://$PROJECT_DIR$/Assignment1/q24.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment1/q23.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment1/maze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+>>>>>>> testBranch
           </folding>
         </state>
       </provider>
@@ -812,32 +964,44 @@
     <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/pathfinding.py">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="403">
           <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
 =======
         <state relative-caret-position="856">
           <caret line="76" column="13" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="13" />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+        <state relative-caret-position="403">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+>>>>>>> testBranch
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment1/testMaze.py">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> testBranch
         <state relative-caret-position="89">
           <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+<<<<<<< HEAD
 =======
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+>>>>>>> testBranch
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment1/maze.py">
+    <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarMD.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="300">
           <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
@@ -845,12 +1009,17 @@
         <state relative-caret-position="150">
           <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+        <state relative-caret-position="740">
+          <caret line="114" column="27" lean-forward="true" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="27" />
+>>>>>>> testBranch
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarMD.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -861,19 +1030,31 @@
         <state relative-caret-position="252">
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
           <caret line="114" column="27" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="27" />
+=======
+    <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarED.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="135" selection-start-line="135" selection-end-line="138" selection-end-column="22" />
+>>>>>>> testBranch
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#62#607#0" />
           </folding>
         </state>
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarED.py">
+=======
+    <entry file="file://$PROJECT_DIR$/Assignment1/maze/preplexMaze.py">
+>>>>>>> testBranch
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        <state relative-caret-position="378">
+          <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+<<<<<<< HEAD
             <element signature="e#62#607#0" />
 =======
     <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarMD.py">
@@ -883,6 +1064,8 @@
           <folding>
             <element signature="e#0#11#0" expanded="true" />
 >>>>>>> 8a9afe03678b502bf17af4501afdab7a3f6e0c87
+=======
+>>>>>>> testBranch
           </folding>
         </state>
       </provider>

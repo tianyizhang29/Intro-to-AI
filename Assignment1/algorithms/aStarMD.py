@@ -27,23 +27,18 @@ class Point():
         return "(%d, %d)" % (self.x, self.y)
 
 class aStar():
-    # def __init__(self, file):
-    #     #read mazeFile file
-    #     mazeFile = np.load(file)
-    #     self.mazeFile = mazeFile
-    #     self.dim = mazeFile.shape[0]
-    #     self.open_list = []
-    #     self.close_list = []
-
     def __init__(self, maze):
         #read mazeFile file
         self.maze = maze
         self.dim = len(maze[0])
         self.open_list = []
         self.close_list = []
+        self.endP = Point(None,self.dim - 1, self.dim - 1, 0)
+        self.path = []
+        self.max_fringe = 0
 
-    def cal_Manhattan(self, x, y):
-        distance  = abs(self.dim - x) + abs(self.dim - y)
+    def cal_Manhattan(self,x,y):
+        distance=abs(self.dim-x)+abs(self.dim-y)
         return distance
 
     def in_open_list(self, point):
@@ -79,6 +74,9 @@ class aStar():
                     existPoint.parent = minF
             else:
                 self.open_list.append(currentPoint)
+                if len(self.open_list) > self.max_fringe:
+                    self.max_fringe = len(self.open_list)
+
 
     def getMinPoint(self):
         current = self.open_list[0]
@@ -98,6 +96,7 @@ class aStar():
         h = self.cal_Manhattan(0,0)
         startNode = Point(None, 0, 0, h)
         self.open_list.append(startNode)
+        self.max_fringe = 1
 
         while True:
             minF = self.getMinPoint()
@@ -111,24 +110,26 @@ class aStar():
 
             point = self.endPointInClose()
             if point:
-                self.printPath(point)
-                return True
+                # self.print_Path(point)
+                self.endP = point
+                end = copy.copy(self.endP)
+                while True:
+                    if self.endP.parent:
+                        self.path.append(self.endP.parent)
+                        self.endP = self.endP.parent
+                    else:
+                        self.path = list(list.__reversed__(self.path))
+                        break
+                self.path.append(end)
+                return [len(self.path), len(self.open_list) + len(self.close_list), self.max_fringe]
             elif len(self.open_list) == 0:
-                return False
+                return [0, len(self.open_list) + len(self.close_list), self.max_fringe]
 
-    def printPath(self, endPoint):
-        path = []
-        end = copy.copy(endPoint)
-        while True:
-            if endPoint.parent:
-                path.append(endPoint.parent)
-                endPoint = endPoint.parent
-            else:
-                path = list(list.__reversed__(path))
-                break
-        for p in path:
-            print(p, end="-> ")
-        print(end)
+    def print_Path(self):
+        for i in range(len(self.path) - 1):
+            print(self.path[i], end="-> ")
+        print(self.path[len(self.path) - 1])
+
 
 if __name__ == "__main__":
     maze = [[0,1,1,1],
@@ -136,6 +137,6 @@ if __name__ == "__main__":
             [0,0,0,1],
             [1,1,0,0]]
     test = aStar(maze= maze)
-    aStar.find_path(test)
-
+    print(test.find_path())
+    test.print_Path()
 
