@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="04490bcc-58a9-46bc-9a69-43e067a77d2b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/3d.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/algorithms/pathfinding.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/algorithms/pathfinding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/maze/4x4_0.5.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/q23.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/q23.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/testMaze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/testMaze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/algorithms/aStarED.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/algorithms/aStarED.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/maze/preplexMaze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/maze/preplexMaze.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,7 +18,7 @@
       <file leaf-file-name="testMaze.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assignment1/testMaze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="89">
               <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -60,11 +57,27 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="aStarED.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarED.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="135" selection-start-line="135" selection-end-line="138" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#62#607#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="preplexMaze.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assignment1/maze/preplexMaze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+            <state relative-caret-position="378">
+              <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,8 +85,8 @@
       <file leaf-file-name="maze.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assignment1/maze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            <state relative-caret-position="300">
+              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -105,6 +118,7 @@
         <option value="$PROJECT_DIR$/Assignment1/testMaze.py" />
         <option value="$PROJECT_DIR$/Assignment1/aStarED.py" />
         <option value="$PROJECT_DIR$/Assignment1/aStarMD.py" />
+        <option value="$PROJECT_DIR$/Assignment1/algorithms/aStarED.py" />
         <option value="$PROJECT_DIR$/Assignment1/maze/preplexMaze.py" />
       </list>
     </option>
@@ -185,7 +199,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.aStarED">
+  <component name="RunManager" selected="Python.aStarED (1)">
+    <configuration name="aStarED (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Introduction to AI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Assignment1/algorithms" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Assignment1/algorithms/aStarED.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="aStarED" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Introduction to AI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -240,13 +272,35 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="preplexMaze" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Introduction to AI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Assignment1/maze" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Assignment1/maze/preplexMaze.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
       <item itemvalue="Python.aStarED" />
       <item itemvalue="Python.aStarMD" />
       <item itemvalue="Python.pathfinding" />
+      <item itemvalue="Python.preplexMaze" />
+      <item itemvalue="Python.aStarED (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.aStarED (1)" />
+        <item itemvalue="Python.preplexMaze" />
         <item itemvalue="Python.aStarED" />
         <item itemvalue="Python.pathfinding" />
         <item itemvalue="Python.aStarMD" />
@@ -282,11 +336,12 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3005284" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952926" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32952926" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32952926" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32952926" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26105565" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26105565" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.11840228" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4336662" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.35235378" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -295,7 +350,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32952926" />
       <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
   </component>
@@ -332,12 +386,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Assignment1/maze/preplexMaze.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Assignment1/algorithms/aStarED.py</url>
-          <line>120</line>
-          <option name="timeStamp" value="18" />
+          <line>140</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -457,6 +516,7 @@
           <caret line="127" column="21" lean-forward="true" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#62#607#0" />
           </folding>
         </state>
       </provider>
@@ -547,6 +607,7 @@
           <caret line="132" column="25" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#62#607#0" />
           </folding>
         </state>
       </provider>
@@ -610,26 +671,7 @@
           <caret line="132" column="25" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment1/testMaze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarED.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="114" column="27" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#62#607#0" />
           </folding>
         </state>
       </provider>
@@ -651,10 +693,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment1/maze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/pathfinding.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
           <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment1/testMaze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -668,20 +730,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment1/maze.py">
+    <entry file="file://$PROJECT_DIR$/Assignment1/algorithms/aStarED.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        <state relative-caret-position="289">
+          <caret line="135" selection-start-line="135" selection-end-line="138" selection-end-column="22" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#62#607#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assignment1/maze/preplexMaze.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        <state relative-caret-position="378">
+          <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
