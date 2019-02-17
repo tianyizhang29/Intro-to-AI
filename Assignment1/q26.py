@@ -35,14 +35,14 @@ for p in ps:
 path_average_bfs = np.array(path_average_bfs)
 path_average_dfs = np.array(path_average_dfs)
 
-np.save('./result/q2/q6/p_' + str(p) + '_' + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) + '.npy', ps)
-np.save('./result/q2/q6/path_average_bfs' + str(p) + '_' + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) + '.npy', path_average_bfs)
-np.save('./result/q2/q6/path_average_dfs' + str(p) + '_' + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) + '.npy', path_average_dfs)
+np.save('./result/q2/q6/p_' + str(p) + '_' + time.strftime('%Y-%m-%d %H-%M-%S',time.localtime(time.time())) + '.npy', ps)
+np.save('./result/q2/q6/path_average_bfs' + str(p) + '_' + time.strftime('%Y-%m-%d %H-%M-%S',time.localtime(time.time())) + '.npy', path_average_bfs)
+np.save('./result/q2/q6/path_average_dfs' + str(p) + '_' + time.strftime('%Y-%m-%d %H-%M-%S',time.localtime(time.time())) + '.npy', path_average_dfs)
 
 """
-path_average_bfs = np.load('./result/q2/q6/path_average_bfs0.79_2019-02-16 01:41:16.npy')
-path_average_dfs = np.load('./result/q2/q6/path_average_dfs0.79_2019-02-16 01:41:16.npy')
-ps = np.load('./result/q2/q6/p_0.79_2019-02-16 01:41:16.npy')
+path_average_bfs = np.load('./result/q2/q6/path_average_bfs0.79_2019-02-16 01-41-16.npy')
+path_average_dfs = np.load('./result/q2/q6/path_average_dfs0.79_2019-02-16 01-41-16.npy')
+ps = np.load('./result/q2/q6/p_0.79_2019-02-16 01-41-16.npy')
 
 
 plt.xlabel('Density')
