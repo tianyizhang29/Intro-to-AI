@@ -25,12 +25,13 @@ for p in ps:
 
 path_average = np.array(path_average)
 
-np.save('./result/q2/q4/p_' + str(dim) + '_' + str(p) + '_' + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) + '.npy', ps)
-np.save('./result/q2/q4/path_average_' + str(dim) + '_' + str(p) + '_' + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) + '.npy', path_average)
+
+np.save('./result/q2/q4/p_' + str(dim) + '_' + str(p) + '_' + time.strftime('%Y-%m-%d %H-%M-%S',time.localtime(time.time())) + '.npy', ps)
+np.save('./result/q2/q4/path_average_' + str(dim) + '_' + str(p) + '_' + time.strftime('%Y-%m-%d %H-%M-%S',time.localtime(time.time())) + '.npy', path_average)
 
 """
-path_average = np.load('./result/q2/q4/path_average_8_0.49_2019-02-15 23:44:35.npy')
-ps = np.load('./result/q2/q4/p_8_0.49_2019-02-15 23:44:35.npy')
+path_average = np.load('./result/q2/q4/path_average_8_0.49_2019-02-15 23-44-35.npy')
+ps = np.load('./result/q2/q4/p_8_0.49_2019-02-15 23-44-35.npy')
 """
 plt.xlabel('Density')
 plt.ylabel('Expected shortest path length')

@@ -24,8 +24,8 @@ for j in p:
         repeate_times -= 1
     passRate.append(passCount / times)
 passRate = np.array(passRate)
-np.save('./result/q2/q3/p_' + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) + '.npy', p)
-np.save('./result/q2/q3/passRate_' + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) + '.npy', passRate)
+np.save('./result/q2/q3/p_' + time.strftime('%Y-%m-%d %H-%M-%S',time.localtime(time.time())) + '.npy', p)
+np.save('./result/q2/q3/passRate_' + time.strftime('%Y-%m-%d %H-%M-%S',time.localtime(time.time())) + '.npy', passRate)
 
 plt.xlabel('density')
 plt.ylabel('solvability')
