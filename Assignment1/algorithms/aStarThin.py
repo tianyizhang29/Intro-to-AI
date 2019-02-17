@@ -1,8 +1,13 @@
 import math
 import numpy as np
 import copy
-import aStarMD
+import aStarMD, aStarED
 import random
+import sys
+sys.path.append("..")
+import maze
+import time
+import matplotlib.pyplot as plt
 
 class Point():
     # f = g + h
@@ -57,8 +62,8 @@ class aStarThin():
 
     def heuristic_dis(self, x, y):
         heuristic = aStarMD.aStar(self.simple_maze)
-        distance = heuristic.find_path_from_point(x, y)
-        return distance
+        result = heuristic.find_path_from_point(x, y)
+        return result
 
     def in_open_list(self, point):
         for temp in self.open_list:
@@ -75,15 +80,17 @@ class aStarThin():
     def searchNear(self, minF, offsetX, offsetY):
         # check out boundary
         if minF.x + offsetX < 0 or minF.x + offsetX >= self.dim or minF.y + offsetY < 0 or minF.y + offsetY >= self.dim :
-            return
+            return 0
         # check barrier; if there is a barrier just jump it
         if self.maze[minF.x + offsetX][minF.y + offsetY] == 1:
-            return
-        current_h = self.heuristic_dis(minF.x + offsetX, minF.y + offsetY)[1]
+            return 0
+        result = self.heuristic_dis(minF.x + offsetX, minF.y + offsetY)
+        current_h = result[0]
+        cost = result[1]
         currentPoint  = Point(minF, minF.x + offsetX, minF.y + offsetY, current_h)
         # Check if it's visited before
         if self.in_close_list(currentPoint) is not None:
-            return
+            return cost
         else:
             # Update couldVisit set and pq
             existPoint = self.in_open_list(currentPoint)
@@ -95,7 +102,7 @@ class aStarThin():
                 self.open_list.append(currentPoint)
                 if len(self.open_list) > self.max_fringe:
                     self.max_fringe = len(self.open_list)
-
+            return cost
 
     def getMinPoint(self):
         current = self.open_list[0]
@@ -112,20 +119,22 @@ class aStarThin():
 
     def find_path(self):
         # create startNode and Add to pq and visited dict
-        h = self.heuristic_dis(0,0)
+        result = self.heuristic_dis(0,0)
+        h = result[0]
         startNode = Point(None, 0, 0, h)
         self.open_list.append(startNode)
         self.max_fringe = 1
 
+        cost = result[1]
         while True:
             minF = self.getMinPoint()
             self.open_list.remove(minF)
             self.close_list.append(minF)
 
-            self.searchNear(minF, 0, 1) #check right
-            self.searchNear(minF, 0, -1) #check left
-            self.searchNear(minF, 1, 0) #check down
-            self.searchNear(minF, -1, 0) #check top
+            cost += self.searchNear(minF, 0, 1) #check right
+            cost += self.searchNear(minF, 0, -1) #check left
+            cost += self.searchNear(minF, 1, 0) #check down
+            cost += self.searchNear(minF, -1, 0) #check top
 
             point = self.endPointInClose()
             if point:
@@ -140,9 +149,9 @@ class aStarThin():
                         self.path = list(list.__reversed__(self.path))
                         break
                 self.path.append(end)
-                return [len(self.path), len(self.open_list) + len(self.close_list), self.max_fringe]
+                return [len(self.path), len(self.open_list) + len(self.close_list) + cost, self.max_fringe]
             elif len(self.open_list) == 0:
-                return [0, len(self.open_list) + len(self.close_list), self.max_fringe]
+                return [0, len(self.open_list) + len(self.close_list) + cost, self.max_fringe]
 
     def print_Path(self):
         for i in range(len(self.path) - 1):
@@ -151,11 +160,42 @@ class aStarThin():
 
 
 if __name__ == "__main__":
-    maze = [[0,1,1,1],
-            [0,0,1,0],
-            [0,0,0,1],
-            [1,1,0,0]]
-    test = aStarThin(maze, 0.5)
-    print(test.find_path())
-    test.print_Path()
+    # maze = [[0,1,1,1],
+    #         [0,0,1,0],
+    #         [0,0,0,1],
+    #         [1,1,0,0]]
+    astMDCost = []
+    astEDCost = []
+    thinCost = 0
+    for i in range(50):
+        matrix = maze.generate_maze(20, 0.4)
+        astMD = aStarMD.aStar(matrix)
+        resultMD = astMD.find_path()
+        while resultMD[0] == 0:
+            matrix = maze.generate_maze(20, 0.4)
+            astMD = aStarMD.aStar(matrix)
+            resultMD = astMD.find_path()
+        
+        astED = aStarED.aStar(matrix)
+        resultED = astED.find_path()
+        astMDCost.append(resultMD[1])
+        astEDCost.append(resultED[1])
+        q = 0.7
+        test = aStarThin(matrix, q)
+        thinCost += test.find_path()[1]
+        print(i)
 
+    x = np.arange(1,51,1)
+    
+    plt.axis([0, 50, 0, 250])
+    plt.xlabel('Heuristic Function')
+    plt.ylabel('Algorithm Cost(# expanded notes)')
+    plt.title('Heuristic Function Comparison')
+    plt.plot(x, astMDCost, label='Manhattan Distance')
+    plt.plot(x, astEDCost, label='Euclidean Distance')
+    plt.legend(loc = 'upper right')
+    plt.show()
+
+    # np.save('../result/q4/matrix_20_0.4_' + time.strftime('%Y-%m-%d %H-%M-%S',time.localtime(time.time())) + '.npy', matrix)
+    # plt.plot(qs, cost)
+    # plt.show()
