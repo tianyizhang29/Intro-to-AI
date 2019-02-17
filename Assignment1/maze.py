@@ -15,10 +15,10 @@ def generate_maze(dim, p):
                 maze[i].append(0)
     maze[0][0] = 0
     maze[dim - 1][dim - 1] = 0
-    np.save('./maze/%sx%s_%s.npy' % (dim, dim, p), maze)
+    # np.save('./mazeFile/%sx%s_%s.npy' % (dim, dim, p), maze)
     return maze
 
 if __name__ == "__main__":
     maze = generate_maze(4, 0.5)
-    # maze = np.load('4x4_0.5.npy')
+    # mazeFile = np.load('4x4_0.5.npy')
     print(maze)
