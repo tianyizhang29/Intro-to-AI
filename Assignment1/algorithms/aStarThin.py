@@ -79,7 +79,7 @@ class aStarThin():
         # check barrier; if there is a barrier just jump it
         if self.maze[minF.x + offsetX][minF.y + offsetY] == 1:
             return
-        current_h = self.heuristic_dis(minF.x + offsetX, minF.y + offsetY)
+        current_h = self.heuristic_dis(minF.x + offsetX, minF.y + offsetY)[1]
         currentPoint  = Point(minF, minF.x + offsetX, minF.y + offsetY, current_h)
         # Check if it's visited before
         if self.in_close_list(currentPoint) is not None:
