@@ -1,6 +1,9 @@
 import math
 import numpy as np
 import copy
+import aStarMD
+import random
+
 class Point():
     # f = g + h
     def __init__(self, parent, x, y, h):
@@ -26,10 +29,12 @@ class Point():
     def __str__(self):
         return "(%d, %d)" % (self.x, self.y)
 
-class aStar():
-    def __init__(self, maze):
+class aStarThin():
+    def __init__(self, maze, q):
         #read mazeFile file
         self.maze = maze
+        self.simple_maze = copy.deepcopy(maze)
+        self.q = q
         self.dim = len(maze[0])
         self.open_list = []
         self.close_list = []
@@ -37,8 +42,22 @@ class aStar():
         self.path = []
         self.max_fringe = 0
 
-    def cal_Manhattan(self,x,y):
-        distance=abs(self.dim-x)+abs(self.dim-y)
+    def simplify_maze(self, q):
+        obstacle = []
+        for i in range(len(self.maze)):
+            for j in range(len(self.maze[0])):
+                if self.maze[i][j] == 1:
+                    obstacle.append([i,j])
+        num = len(obstacle) * q
+        random.shuffle(obstacle)
+        for i in range(num):
+            locate = obstacle[i]
+            self.simple_maze[locate[0]][locate[1]] = 0
+        return
+
+    def heuristic_dis(self, x, y):
+        heuristic = aStarMD.aStar(self.simple_maze)
+        distance = heuristic.find_path_from_point(x, y)
         return distance
 
     def in_open_list(self, point):
@@ -60,7 +79,7 @@ class aStar():
         # check barrier; if there is a barrier just jump it
         if self.maze[minF.x + offsetX][minF.y + offsetY] == 1:
             return
-        current_h = self.cal_Manhattan(minF.x + offsetX, minF.y + offsetY)
+        current_h = self.heuristic_dis(minF.x + offsetX, minF.y + offsetY)
         currentPoint  = Point(minF, minF.x + offsetX, minF.y + offsetY, current_h)
         # Check if it's visited before
         if self.in_close_list(currentPoint) is not None:
@@ -93,11 +112,8 @@ class aStar():
 
     def find_path(self):
         # create startNode and Add to pq and visited dict
-        return self.find_path_from_point(0, 0)
-
-    def find_path_from_point(self, x, y):
-        h = self.cal_Manhattan(x,y)
-        startNode = Point(None, x, y, h)
+        h = self.heuristic_dis(0,0)
+        startNode = Point(None, 0, 0, h)
         self.open_list.append(startNode)
         self.max_fringe = 1
 
@@ -128,7 +144,6 @@ class aStar():
             elif len(self.open_list) == 0:
                 return [0, len(self.open_list) + len(self.close_list), self.max_fringe]
 
-
     def print_Path(self):
         for i in range(len(self.path) - 1):
             print(self.path[i], end="-> ")
@@ -140,7 +155,7 @@ if __name__ == "__main__":
             [0,0,1,0],
             [0,0,0,1],
             [1,1,0,0]]
-    test = aStar(maze= maze)
+    test = aStarThin(maze, 0.5)
     print(test.find_path())
     test.print_Path()
 
