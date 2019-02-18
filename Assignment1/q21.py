@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 
-times = 10000
+times = 1000
 
 dims = np.arange(45, 53, 1)
 p = np.arange(0.3, 0.6, 0.1)
@@ -33,6 +33,6 @@ fig = plt.figure()
 ax = Axes3D(fig)
 ax.plot_surface(dims, p, passRate, rstride=1, cstride=1, cmap='rainbow')
 plt.show()
-# Beacause of the top left and bottom right position are the start point and end point. So the size of 
-# maze should larger than 2. The smallest size should be 3. In this experiment, we would like to try 20
-# times, setting the repeat time with 20. Test the execution time of DFS algorithm.
+# Because of the top left and bottom right position are the start point and end point. So the size of
+# maze should larger than 2. The smallest size should be 3. In this experiment, we would like to try 1000
+# times, setting the repeat time with 1000. Test the execution time of DFS algorithm.
