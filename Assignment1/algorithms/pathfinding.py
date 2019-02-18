@@ -12,7 +12,6 @@ def recur(maze, isVisited, i, j, path, result, recurDepth):
 	global maxRecursiveDepth
 	recurDepth += 1
 	maxRecursiveDepth = recurDepth if recurDepth > maxRecursiveDepth else maxRecursiveDepth
-	print(maxRecursiveDepth)
 	# Return the function if the parameters are illegal.
 	if i < 0 or i >= len(maze) or j < 0 or j >= len(maze[0]) or isVisited[i][j] == 1 or maze[i][j] == 1:
 		return;
@@ -38,7 +37,7 @@ def recur(maze, isVisited, i, j, path, result, recurDepth):
 	path.pop(len(path) - 1)
 
 """The DFS algorithm."""
-def dfs(maze):
+def dfs_find_path(maze):
 	# Create a matrix which label the visited point in mazeFile.
 	isVisited = np.zeros((len(maze), len(maze[0])))
 
@@ -52,10 +51,14 @@ def dfs(maze):
 		for j in i:
 			if j == 1:
 				expandPoints += 1
-	return [len(result), expandPoints, maxRecursiveDepth]
+	return [result, expandPoints, maxRecursiveDepth]
+
+def dfs(maze):
+	result = dfs_find_path(maze)
+	return [len(result[0]), result[1], result[2]]
 
 """The BFS algorithm"""
-def bfs(maze):
+def bfs_find_path(maze):
 	path = []
 	isVisited = np.zeros((len(maze), len(maze[0])))
 	queue = [[0, 0]]
@@ -77,7 +80,12 @@ def bfs(maze):
 						curPos = dict[curPos];
 					path.append([0,0])
 					path.reverse()
-					return path
+					expandPoints = 0
+					for i in isVisited:
+						for j in i:
+							if j == 1:
+								expandPoints += 1
+					return [path, expandPoints, maxQueueSize]
 				if(newI >= 0 and newI < len(maze) and newJ >= 0 and newJ < len(maze) and maze[newI][newJ] == 0 and isVisited[newI][newJ] == 0):
 					dict[newI * len(maze[0]) + newJ] = pos[0] * len(maze[0]) + pos[1]
 					queue.append([newI, newJ])
@@ -87,7 +95,11 @@ def bfs(maze):
 		for j in i:
 			if j == 1:
 				expandPoints += 1
-	return [len(path), expandPoints, maxQueueSize]
+	return [path, expandPoints, maxQueueSize]
+
+def bfs(maze):
+	result = bfs_find_path(maze)
+	return [len(result[0]), result[1], result[2]]
 
 if __name__ == "__main__":
 	# mazeFile = np.load('./mazeFile/4x4_0.5.npy')
