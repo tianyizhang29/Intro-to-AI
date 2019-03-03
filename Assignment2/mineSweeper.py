@@ -29,10 +29,14 @@ class minSweeper:
             for j in range(3):
                 new_x = cur_x + self.dx[i]
                 new_y = cur_y + self.dy[j]
-                if self.grid[new_x][new_y] == "N" or self.grid[new_x][new_y] == "*":
+                if self.reveal[new_x][new_y] == "N" or self.reveal[new_x][new_y] == "*" or self.reveal[new_x][new_y] == "W":
                     continue
                 else:
                     neighbour_hint.append(cell(new_x, new_y))
+
+
+
+        # bug -> 多个位置可以判定是雷或者空
         while len(neighbour_hint) != 0:
             cur_cell = neighbour_hint.pop(0)
             last_pos = 9
@@ -41,19 +45,19 @@ class minSweeper:
                 for j in range(3):
                     x = cur_cell.x + self.dx[i]
                     y = cur_cell.y + self.dy[j]
-                    if self.grid[x][y] == "N":
+                    if self.reveal[x][y] == "N":
                         continue
-                    elif self.grid[x][y] == "*":
+                    elif self.reveal[x][y] == "*" and self.reveal[x][y] == "W":
                         mine = mine - 1
                         last_pos -= 1
                     else:
                         last_pos = last_pos - 1
-                # 一定是雷
-                if last_pos == mine:
-                    return 1
-                # 一定不是雷
-                elif mine == 0:
-                    return 2
+                    # 一定是雷
+                    if last_pos == mine:
+                        return 1
+                    # 一定不是雷
+                    elif mine == 0:
+                        return 2
             return 0
 
     # 当没有能够推论出一定是雷的点的时候，找是雷可能性最小的点。
@@ -112,6 +116,12 @@ class minSweeper:
                     if self.grid[new_x][new_y] == "N":
                         self.to_be_revealed.__add__(cell(new_x, new_y))
 
+    def check_finished(self):
+        for i in self.reveal:
+            if i == "N":
+                return False
+        return True
+
     # start_game
     def game(self):
         # find a start point to start;
@@ -151,6 +161,12 @@ class minSweeper:
                 self.to_be_revealed.pop(next_position)
                 if self.grid[next_cell.x][next_cell.y] == "-1":
                     self.reveal[next_cell.x][next_cell.y] = "W"
+                else:
+                    self.reveal[next_cell.x][next_cell.y] = self.grid[next_cell.x][next_cell.y]
+                    self.to_be_revealed.append(cell(next_cell))
+            if self.check_finished():
+                print("---------------Finished-------------------")
+                print("correct rate: %s" % (self.num_mine / 15.0))
 
 
 
