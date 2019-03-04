@@ -97,14 +97,6 @@ class minSweeper:
                         res += mine / last_pos
         return res
 
-    # 计算这个点是雷的最大可能性
-    def maxPossibility(self, cell):
-        return float
-
-    # 检查是否找到了所有的雷
-    def check_status(self):
-        return bool
-
     # 检查周围的8个点是否可以加入
     def check_neighbour(self, x, y):
         for i in range(3):
