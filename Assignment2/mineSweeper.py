@@ -47,7 +47,7 @@ class minSweeper:
                     y = cur_cell.y + self.dy[j]
                     if self.reveal[x][y] == "N":
                         continue
-                    elif self.reveal[x][y] == "*" and self.reveal[x][y] == "W":
+                    elif self.reveal[x][y] == "*" or self.reveal[x][y] == "W":
                         mine = mine - 1
                         last_pos -= 1
                     else:
@@ -70,6 +70,7 @@ class minSweeper:
                 min_prob = prob
                 res_index = i
         # self.to_be_revealed.pop(res_index)
+
         return res_index
 
     # 计算每个cell是雷的可能性（计算方法待定）。
@@ -79,23 +80,24 @@ class minSweeper:
             for j in range(3):
                 new_x = cell.x + self.dx[i]
                 new_y = cell.y + self.dy[j]
-                if new_x >=0 and new_x < self.d and new_y >= 0 and new_y < self.d:
-                    if self.grid[new_x][new_y] != "N" or self.grid[new_x][new_y] != "*":
+                if new_x >=0 and new_x < self.d and new_y >= 0 and new_y < self.d: # Validate
+                    if self.reveal[new_x][new_y] != "N" and self.reveal[new_x][new_y] != "*" and self.reveal[new_x][new_y] != "W":
                         last_pos = 9
                         mine = self.grid[new_x][new_y]
                         for i in range(3):
                             for j in range(3):
                                 x = new_x + self.dx[i]
                                 y = new_y + self.dy[j]
-                                if self.grid[x][y] == "N":
-                                    continue
-                                elif self.grid[x][y] == "*":
-                                    mine = mine - 1
-                                    last_pos -= 1
-                                else:
-                                    last_pos = last_pos - 1
+                                # 此处需要验证坐标有效性
+                                if new_x >=0 and new_x < self.d and new_y >= 0 and new_y < self.d:
+                                    if self.reveal[x][y] == "N":
+                                        continue
+                                    elif self.reveal[x][y] == "*" or self.reveal[new_x][new_y] == "W":
+                                        mine -= - 1
+                                        last_pos -= 1
+                                    else:
+                                        last_pos -= 1
                         res += mine / last_pos
-
         return res
 
     # 计算这个点是雷的最大可能性
