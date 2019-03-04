@@ -98,13 +98,15 @@ class minSweeper:
         return res
 
     # 检查周围的8个点是否可以加入
-    def check_neighbour(self, x, y):
+    def check_neighbour(self, cell):
+        x = cell.x
+        y = cell.y
         for i in range(3):
             for j in range(3):
                 new_x = x + self.dx[i]
                 new_y = y + self.dy[j]
                 if new_x >= 0 and new_x < self.d and new_y >= 0 and new_y < self.d:
-                    if self.grid[new_x][new_y] == "N":
+                    if self.reveal[new_x][new_y] == "N":
                         self.to_be_revealed.__add__(cell(new_x, new_y))
 
     def check_finished(self):
