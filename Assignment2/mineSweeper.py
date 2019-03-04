@@ -129,39 +129,39 @@ class minSweeper:
             self.check_neighbour(x, y)
         while True:
             find_mark = False
+            # check whether the cell in to_be_reveal list is mine or not.
             for i in range(len(self.to_be_revealed)):
                 cur_cell = self.to_be_revealed.__getitem__(i)
                 # 这个点一定是雷, Mark, 更新to_be_revealed。Break;
                 if self.find_mine(cur_cell) == 1:
                     self.num_mine +=1
                     self.reveal[cur_cell.x][cur_cell.y] = "*"
-                    self.check_neighbour(cur_cell.x, cur_cell.y)
                     self.to_be_revealed.pop(i)
+                    self.check_neighbour(cur_cell.x, cur_cell.y)
                     find_mark = True
                     break
                 # 一定不是雷
                 elif self.find_mine(cur_cell) == 2:
                     self.reveal[cur_cell.x][cur_cell.y] = self.grid[cur_cell.x][cur_cell.y]
                     self.to_be_revealed.pop(i)
+                    find_mark = True
                     self.check_neighbour(cur_cell.x, cur_cell.y)
                     break
             if find_mark:
                 continue
             # 已经标记了所有是雷的情况：
             else:
-                next_position = self.find_reachable_position()
-                next_cell = self.to_be_revealed.__getitem__(next_position)
-                self.to_be_revealed.pop(next_position)
+                next_index = self.find_reachable_position()
+                next_cell = self.to_be_revealed.pop(next_index)
                 if self.grid[next_cell.x][next_cell.y] == "-1":
                     self.reveal[next_cell.x][next_cell.y] = "W"
                 else:
                     self.reveal[next_cell.x][next_cell.y] = self.grid[next_cell.x][next_cell.y]
-                    self.to_be_revealed.append(cell(next_cell))
+                    self.check_neighbour(next_cell)
             if self.check_finished():
                 print("---------------Finished-------------------")
                 print("correct rate: %s" % (self.num_mine / 15.0))
-
-
+                return
 
 if __name__ == '__main__':
     test = minSweeper("10_15.npy")
