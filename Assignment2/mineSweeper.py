@@ -12,7 +12,8 @@ class minSweeper:
         self.grid = np.load(file)
         self.d = len(self.grid)
         self.n = 15
-        self.reveal = [["N" * self.d] in range(self.d)]
+        tenN = ["N", "N", "N", "N", "N", "N", "N", "N", "N", "N"]
+        self.reveal = [tenN.copy() for i in range(self.d)]
         self.to_be_revealed = []
         self.num_mine = 0
         self.dx = [-1, 0, 1]
@@ -98,16 +99,16 @@ class minSweeper:
         return res
 
     # 检查周围的8个点是否可以加入
-    def check_neighbour(self, cell):
-        x = cell.x
-        y = cell.y
+    def check_neighbour(self, x, y):
+        # x = cell.x
+        # y = cell.y
         for i in range(3):
             for j in range(3):
                 new_x = x + self.dx[i]
                 new_y = y + self.dy[j]
                 if new_x >= 0 and new_x < self.d and new_y >= 0 and new_y < self.d:
                     if self.reveal[new_x][new_y] == "N":
-                        self.to_be_revealed.__add__(cell(new_x, new_y))
+                        self.to_be_revealed.__add__([cell(new_x, new_y)])
 
     def check_finished(self):
         for i in self.reveal:
@@ -118,8 +119,10 @@ class minSweeper:
     # start_game
     def game(self):
         # find a start point to start;
-        x = random.randint(0, self.d)
-        y = random.randint(0, self.d)
+        x = random.randint(0, self.d - 1)
+        y = random.randint(0, self.d - 1)
+        print(x)
+        print(y)
         num = self.grid[x][y]
         if (num == -1):
             print("boom!")
@@ -152,12 +155,14 @@ class minSweeper:
             # 已经标记了所有是雷的情况：
             else:
                 next_index = self.find_reachable_position()
-                next_cell = self.to_be_revealed.pop(next_index)
-                if self.grid[next_cell.x][next_cell.y] == "-1":
-                    self.reveal[next_cell.x][next_cell.y] = "W"
-                else:
-                    self.reveal[next_cell.x][next_cell.y] = self.grid[next_cell.x][next_cell.y]
-                    self.check_neighbour(next_cell)
+                print("Next index is: %s", next_index)
+                if next_index != -1:
+                    next_cell = self.to_be_revealed.pop(next_index)
+                    if self.grid[next_cell.x][next_cell.y] == "-1":
+                        self.reveal[next_cell.x][next_cell.y] = "W"
+                    else:
+                        self.reveal[next_cell.x][next_cell.y] = self.grid[next_cell.x][next_cell.y]
+                        self.check_neighbour(next_cell.x, next_cell.y)
             if self.check_finished():
                 print("---------------Finished-------------------")
                 print("correct rate: %s" % (self.num_mine / 15.0))
