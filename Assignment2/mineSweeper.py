@@ -29,35 +29,34 @@ class minSweeper:
             for j in range(3):
                 new_x = cur_x + self.dx[i]
                 new_y = cur_y + self.dy[j]
-                if self.reveal[new_x][new_y] == "N" or self.reveal[new_x][new_y] == "*" or self.reveal[new_x][new_y] == "W":
-                    continue
-                else:
-                    neighbour_hint.append(cell(new_x, new_y))
+                if new_x >=0 and new_x < self.d and new_y >= 0 and new_y < self.d: # Validate
+                    if self.reveal[new_x][new_y] == "N" or self.reveal[new_x][new_y] == "*" or self.reveal[new_x][new_y] == "W":
+                        continue
+                    else:
+                        neighbour_hint.append(cell(new_x, new_y))
 
-
-
-        # bug -> 多个位置可以判定是雷或者空
         while len(neighbour_hint) != 0:
             cur_cell = neighbour_hint.pop(0)
             last_pos = 9
             mine = self.grid[cur_cell.x][cur_cell.y]
             for i in range(3):
                 for j in range(3):
-                    x = cur_cell.x + self.dx[i]
-                    y = cur_cell.y + self.dy[j]
-                    if self.reveal[x][y] == "N":
-                        continue
-                    elif self.reveal[x][y] == "*" or self.reveal[x][y] == "W":
-                        mine = mine - 1
-                        last_pos -= 1
-                    else:
-                        last_pos = last_pos - 1
-                    # 一定是雷
-                    if last_pos == mine:
-                        return 1
-                    # 一定不是雷
-                    elif mine == 0:
-                        return 2
+                    new_x = cur_cell.x + self.dx[i]
+                    new_y = cur_cell.y + self.dy[j]
+                    if new_x >=0 and new_x < self.d and new_y >= 0 and new_y < self.d: # Validate
+                        if self.reveal[new_x][new_y] == "N":
+                            continue
+                        elif self.reveal[new_x][new_y] == "*" or self.reveal[new_x][new_y] == "W":
+                            mine = mine - 1
+                            last_pos -= 1
+                        else:
+                            last_pos -= 1
+                        # 一定是雷
+                        if last_pos == mine:
+                            return 1
+                        # 一定不是雷
+                        elif mine == 0 and last_pos != 0:
+                            return 2
             return 0
 
     # 当没有能够推论出一定是雷的点的时候，找是雷可能性最小的点。
