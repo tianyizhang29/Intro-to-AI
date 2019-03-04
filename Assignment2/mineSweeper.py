@@ -64,7 +64,7 @@ class minSweeper:
         min_prob = 8
         res_index = -1
         for i in range(len(self.to_be_revealed)):
-            prob = self.cal_possibility(self.to_be_revealed[.__getitem__(i)])
+            prob = self.cal_possibility(self.to_be_revealed.__getitem__(i))
             if prob < min_prob:
                 min_prob = prob
                 res_index = i
