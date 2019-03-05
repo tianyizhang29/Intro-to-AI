@@ -213,9 +213,8 @@ class minSweeper:
                     print('')
                     print("---------------Finished-------------------")
                     print("correct rate: %s" % (self.num_mine / self.total_mine))
+                    self.reveal = np.asarray(self.reveal)
                     return self.num_mine / self.total_mine
-        matrix = np.asarray(self.reveal)
-        drawGrid.drawGrid(matrix)
 
 if __name__ == '__main__':
     # d = 20
@@ -241,5 +240,5 @@ if __name__ == '__main__':
     map = ev.initial_environment(d,int(n))
     test = minSweeper(map, n)
     res = test.game()
-    matrix = np.asarray(test.reveal)
-    drawGrid.drawGrid(matrix)
+    # draw final result
+    drawGrid.drawGrid(test.reveal)

@@ -13,8 +13,6 @@ def drawGrid(reveal_matrix):
 
     gridWidth = len(reveal_matrix)
     gridHeight = len(reveal_matrix[0])
-    print(gridWidth)
-    print(gridHeight)
     size = 30
     gap = 2
 
