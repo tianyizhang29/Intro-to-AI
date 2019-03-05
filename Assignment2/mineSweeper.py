@@ -58,15 +58,19 @@ class minSweeper:
                                 last_pos = last_pos - 1
                         # 一定是雷
                         if last_pos == mine:
-                            print("(%s, %s) is mine!!!!" % (cell.x, cell.y))
+                            print("")
+                            print("Found (%s, %s) is mine..." % (cell.x, cell.y))
+                            print("")
                             return 1
                         # 一定不是雷
                         elif mine == 0 and last_pos != 0:
-                            print("(%s, %s) is safe!!!!" % (cell.x, cell.y))
+                            print("")
+                            print("Found (%s, %s) is safe..." % (cell.x, cell.y))
+                            print("")
                             return 2
                     else:
                         last_pos -= 1
-        print("(%s, %s) unsure!!!!" % (cell.x, cell.y))
+        #print("(%s, %s) unsure!!!!" % (cell.x, cell.y))
         return 0
 
     # 当没有能够推论出一定是雷的点的时候，找是雷可能性最小的点。
@@ -144,64 +148,66 @@ class minSweeper:
         print('----------------------------------------')
     # start_game
     def game(self):
-        # find a start point to start;
-        # x = random.randint(0, self.d - 1)
-        # y = random.randint(0, self.d - 1)
-        #
-        # print(x, y)
-        x = 3
-        y = 8
-        num = self.grid[x][y]
-        if (num == -1):
-            print("boom!")
-            return
-        else:
-            self.reveal[x][y] = num
-            self.visited[x][y] = 2
-            self.check_neighbour(x, y)
-        self.print_reveal()
         while True:
-            self.print_reveal()
-            find_mark = False
-            for i in range(len(self.to_be_revealed)):
-                cur_cell = self.to_be_revealed.__getitem__(i)
-                # 这个点一定是雷, Mark, 更新to_be_revealed。Break;
-                check_res = self.find_mine(cur_cell)
-                if check_res == 1:
-                    self.num_mine +=1
-                    self.reveal[cur_cell.x][cur_cell.y] = "*"
-                    self.visited[cur_cell.x][cur_cell.y] = 2
-                    self.check_neighbour(cur_cell.x, cur_cell.y)
-                    self.to_be_revealed.pop(i)
-                    find_mark = True
-                    break
-                # 一定不是雷
-                elif check_res == 2:
-                    self.reveal[cur_cell.x][cur_cell.y] = self.grid[cur_cell.x][cur_cell.y]
-                    self.visited[cur_cell.x][cur_cell.y] = 2
-                    self.to_be_revealed.pop(i)
-                    self.check_neighbour(cur_cell.x, cur_cell.y)
-                    find_mark = True
-                    break
-            if find_mark:
+            # find a start point to start;
+            x = random.randint(0, self.d - 1)
+            y = random.randint(0, self.d - 1)
+            # x = 3
+            # y = 8
+            num = self.grid[x][y]
+            if (num == -1):
                 continue
-            # 已经标记了所有是雷的情况：
             else:
-                next_index = self.find_reachable_position()
-                if next_index != -1:
-                    next_cell = self.to_be_revealed.__getitem__(next_index)
-                    print("Into Guess Part; Guess(%s, %s) as next cell" % (next_cell.x, next_cell.y))
-                    self.to_be_revealed.pop(next_index)
-                    self.visited[next_cell.x][next_cell.y] = 2
-                    if self.grid[next_cell.x][next_cell.y] == -1:
-                        self.reveal[next_cell.x][next_cell.y] = "W"
-                    else:
-                        self.reveal[next_cell.x][next_cell.y] = self.grid[next_cell.x][next_cell.y]
-                        self.check_neighbour(next_cell.x, next_cell.y)
-            if self.check_finished():
-                print("---------------Finished-------------------")
-                print("correct rate: %s" % (self.num_mine / 15.0))
-                return
+                self.reveal[x][y] = num
+                self.visited[x][y] = 2
+                self.check_neighbour(x, y)
+            print("Starting point at (%s, %s)" % (x, y))
+            while True:
+                self.print_reveal()
+                find_mark = False
+                for i in range(len(self.to_be_revealed)):
+                    cur_cell = self.to_be_revealed.__getitem__(i)
+                    # 这个点一定是雷, Mark, 更新to_be_revealed。Break;
+                    check_res = self.find_mine(cur_cell)
+                    if check_res == 1:
+                        self.num_mine +=1
+                        self.reveal[cur_cell.x][cur_cell.y] = "*"
+                        self.visited[cur_cell.x][cur_cell.y] = 2
+                        self.check_neighbour(cur_cell.x, cur_cell.y)
+                        self.to_be_revealed.pop(i)
+                        find_mark = True
+                        break
+                    # 一定不是雷
+                    elif check_res == 2:
+                        self.reveal[cur_cell.x][cur_cell.y] = self.grid[cur_cell.x][cur_cell.y]
+                        self.visited[cur_cell.x][cur_cell.y] = 2
+                        self.to_be_revealed.pop(i)
+                        self.check_neighbour(cur_cell.x, cur_cell.y)
+                        find_mark = True
+                        break
+                if find_mark:
+                    continue
+                # 已经标记了所有是雷的情况：
+                else:
+                    next_index = self.find_reachable_position()
+                    if next_index != -1:
+                        next_cell = self.to_be_revealed.__getitem__(next_index)
+                        print("")
+                        print("Into Guess Part; Guess(%s, %s) as next cell" % (next_cell.x, next_cell.y))
+                        print("")
+                        self.to_be_revealed.pop(next_index)
+                        self.visited[next_cell.x][next_cell.y] = 2
+                        if self.grid[next_cell.x][next_cell.y] == -1:
+                            self.reveal[next_cell.x][next_cell.y] = "W"
+                        else:
+                            self.reveal[next_cell.x][next_cell.y] = self.grid[next_cell.x][next_cell.y]
+                            self.check_neighbour(next_cell.x, next_cell.y)
+                if self.check_finished():
+                    print('')
+                    print('')
+                    print("---------------Finished-------------------")
+                    print("correct rate: %s" % (self.num_mine / 15.0))
+                    return self.num_mine / 15.0
 
 
 
