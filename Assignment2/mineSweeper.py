@@ -2,6 +2,7 @@ import matplotlib.pyplot as pl
 import environment as ev
 import numpy as np
 import random
+import drawGrid
 
 class Cell:
     def __init__(self, x, y):
@@ -138,12 +139,16 @@ class minSweeper:
                 if item == "N":
                     return False
         return True
+
     def print_reveal(self):
         for i in range(self.d):
             for j in range(self.d):
                 print(self.reveal[i][j], end='  ')
             print('')
+        # matrix = np.asarray(self.reveal)
+        # drawGrid.drawGrid(matrix)
         print('----------------------------------------')
+
     # start_game
     def game(self):
         while True:
@@ -161,7 +166,7 @@ class minSweeper:
                 self.check_neighbour(x, y)
             print("Starting point at (%s, %s)" % (x, y))
             while True:
-                # self.print_reveal()
+                self.print_reveal()
                 find_mark = False
                 for i in range(len(self.to_be_revealed)):
                     cur_cell = self.to_be_revealed.__getitem__(i)
@@ -206,24 +211,32 @@ class minSweeper:
                     print("---------------Finished-------------------")
                     print("correct rate: %s" % (self.num_mine / self.total_mine))
                     return self.num_mine / self.total_mine
-
-
+        matrix = np.asarray(self.reveal)
+        drawGrid.drawGrid(matrix)
 
 if __name__ == '__main__':
-    d = 20
-    rate = np.arange(0, 0.38, 0.02)
-    result = []
-    for r in rate:
-        print(r)
-        n = d * d * r
-        map = ev.initial_environment(d,int(n))
-        test = minSweeper(map, n)
-        res = test.game()
-        result.append(res)
+    # d = 20
+    # rate = np.arange(0, 0.38, 0.02)
+    # result = []
+    # for r in rate:
+    #     print(r)
+    #     n = d * d * r
+    #     map = ev.initial_environment(d,int(n))
+    #     test = minSweeper(map, n)
+    #     res = test.game()
+    #     result.append(res)
 
-    pl.plot(rate, result)
-    pl.title("Mine density vs Final score")
-    pl.xlabel("Mine density")
-    pl.xlabel("Final score")
-    pl.axis([0, rate[(len(rate) - 1)], 0, 1.2])
-    pl.show()
+    # pl.plot(rate, result)
+    # pl.title("Mine density vs Final score")
+    # pl.xlabel("Mine density")
+    # pl.xlabel("Final score")
+    # pl.axis([0, rate[(len(rate) - 1)], 0, 1.2])
+    # pl.show()
+    d = 20
+    rate = 0.15
+    n = d * d * rate
+    map = ev.initial_environment(d,int(n))
+    test = minSweeper(map, n)
+    res = test.game()
+    matrix = np.asarray(test.reveal)
+    drawGrid.drawGrid(matrix)
