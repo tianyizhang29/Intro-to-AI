@@ -56,15 +56,15 @@ class minSweeper:
                                 last_pos = last_pos - 1
                         # 一定是雷
                         if last_pos == mine:
-                            # print("")
-                            # print("Found (%s, %s) is mine..." % (cell.x, cell.y))
-                            # print("")
+                            print("")
+                            print("Found (%s, %s) is mine..." % (cell.x, cell.y))
+                            print("")
                             return 1
                         # 一定不是雷
                         elif mine == 0 and last_pos != 0:
-                            # print("")
-                            # print("Found (%s, %s) is safe..." % (cell.x, cell.y))
-                            # print("")
+                            print("")
+                            print("Found (%s, %s) is safe..." % (cell.x, cell.y))
+                            print("")
                             return 2
                     else:
                         last_pos -= 1
@@ -135,7 +135,7 @@ class minSweeper:
     def check_finished(self):
         for i in self.reveal.__iter__():
             for item in i.__iter__():
-                if item == "N":
+                if item.__eq__("N"):
                     return False
         return True
     def print_reveal(self):
@@ -161,7 +161,7 @@ class minSweeper:
                 self.check_neighbour(x, y)
             print("Starting point at (%s, %s)" % (x, y))
             while True:
-                # self.print_reveal()
+                self.print_reveal()
                 find_mark = False
                 for i in range(len(self.to_be_revealed)):
                     cur_cell = self.to_be_revealed.__getitem__(i)
@@ -190,16 +190,19 @@ class minSweeper:
                     next_index = self.find_reachable_position()
                     if next_index != -1:
                         next_cell = self.to_be_revealed.__getitem__(next_index)
-                        # print("")
-                        # print("Into Guess Part; Guess(%s, %s) as next cell" % (next_cell.x, next_cell.y))
-                        # print("")
+                        print("")
+                        print("Into Guess Part; Guess(%s, %s) as next cell" % (next_cell.x, next_cell.y))
+                        print("")
                         self.to_be_revealed.pop(next_index)
                         self.visited[next_cell.x][next_cell.y] = 2
                         if self.grid[next_cell.x][next_cell.y] == -1:
                             self.reveal[next_cell.x][next_cell.y] = "W"
+                            self.check_neighbour(next_cell.x, next_cell.y)
+
                         else:
                             self.reveal[next_cell.x][next_cell.y] = self.grid[next_cell.x][next_cell.y]
                             self.check_neighbour(next_cell.x, next_cell.y)
+
                 if self.check_finished():
                     print('')
                     print('')
@@ -211,7 +214,7 @@ class minSweeper:
 
 if __name__ == '__main__':
     d = 20
-    rate = np.arange(0, 0.38, 0.02)
+    rate = np.arange(0.0, 1.0, 0.02)
     result = []
     for r in rate:
         print(r)
