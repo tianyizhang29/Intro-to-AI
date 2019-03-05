@@ -13,18 +13,15 @@ class minSweeper:
     def __init__(self, file):
         self.grid = np.load(file)
         self.d = len(self.grid)
-        self.n = 15
-        #self.reveal = [["N" * self.d] in range(self.d)]
-        tenN = ["N", "N", "N", "N", "N", "N", "N", "N", "N", "N"]
         self.visited = np.reshape(np.zeros(self.d * self.d), (self.d, self.d))
-        self.reveal = [tenN.copy() for i in range(self.d)]
+        self.reveal = [(["N"] * self.d).copy() for i in range(self.d)]
         self.to_be_revealed = []
         self.num_mine = 0
         self.dx = [-1, 0, 1]
         self.dy = [-1, 0, 1]
+        self.total_mine = int(file.split('_')[1][0: -4])
 
-
-    # 找一定是雷的点，标记
+# 找一定是雷的点，标记
     def find_mine(self, cell):
         cur_x = cell.x
         cur_y = cell.y
@@ -206,11 +203,11 @@ class minSweeper:
                     print('')
                     print('')
                     print("---------------Finished-------------------")
-                    print("correct rate: %s" % (self.num_mine / 15.0))
-                    return self.num_mine / 15.0
+                    print("correct rate: %s" % (self.num_mine / self.total_mine))
+                    return self.num_mine / self.total_mine
 
 
 
 if __name__ == '__main__':
-    test = minSweeper("10_15.npy")
+    test = minSweeper("16_40.npy")
     test.game()

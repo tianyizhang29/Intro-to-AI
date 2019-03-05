@@ -30,5 +30,5 @@ def initial_environment(d, n):
     return map
 
 if __name__ == '__main__':
-    res = initial_environment(10,15)
+    res = initial_environment(16,40)
     print(res)
