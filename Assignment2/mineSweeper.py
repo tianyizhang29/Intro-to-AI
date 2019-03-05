@@ -1,5 +1,5 @@
-
-
+import matplotlib.pyplot as pl
+import environment as ev
 import numpy as np
 import random
 
@@ -10,8 +10,8 @@ class Cell:
 
 class minSweeper:
     # reveal[][] num represents visited; "*" mark as mine; "W" is mine with wrong detection;
-    def __init__(self, file):
-        self.grid = np.load(file)
+    def __init__(self, map, total_mine):
+        self.grid = map
         self.d = len(self.grid)
         self.visited = np.reshape(np.zeros(self.d * self.d), (self.d, self.d))
         self.reveal = [(["N"] * self.d).copy() for i in range(self.d)]
@@ -19,7 +19,8 @@ class minSweeper:
         self.num_mine = 0
         self.dx = [-1, 0, 1]
         self.dy = [-1, 0, 1]
-        self.total_mine = int(file.split('_')[1][0: -4])
+        # self.total_mine = int(file.split('_')[1][0: -4])
+        self.total_mine = total_mine
 
 # 找一定是雷的点，标记
     def find_mine(self, cell):
@@ -55,15 +56,15 @@ class minSweeper:
                                 last_pos = last_pos - 1
                         # 一定是雷
                         if last_pos == mine:
-                            print("")
-                            print("Found (%s, %s) is mine..." % (cell.x, cell.y))
-                            print("")
+                            # print("")
+                            # print("Found (%s, %s) is mine..." % (cell.x, cell.y))
+                            # print("")
                             return 1
                         # 一定不是雷
                         elif mine == 0 and last_pos != 0:
-                            print("")
-                            print("Found (%s, %s) is safe..." % (cell.x, cell.y))
-                            print("")
+                            # print("")
+                            # print("Found (%s, %s) is safe..." % (cell.x, cell.y))
+                            # print("")
                             return 2
                     else:
                         last_pos -= 1
@@ -160,7 +161,7 @@ class minSweeper:
                 self.check_neighbour(x, y)
             print("Starting point at (%s, %s)" % (x, y))
             while True:
-                self.print_reveal()
+                # self.print_reveal()
                 find_mark = False
                 for i in range(len(self.to_be_revealed)):
                     cur_cell = self.to_be_revealed.__getitem__(i)
@@ -189,9 +190,9 @@ class minSweeper:
                     next_index = self.find_reachable_position()
                     if next_index != -1:
                         next_cell = self.to_be_revealed.__getitem__(next_index)
-                        print("")
-                        print("Into Guess Part; Guess(%s, %s) as next cell" % (next_cell.x, next_cell.y))
-                        print("")
+                        # print("")
+                        # print("Into Guess Part; Guess(%s, %s) as next cell" % (next_cell.x, next_cell.y))
+                        # print("")
                         self.to_be_revealed.pop(next_index)
                         self.visited[next_cell.x][next_cell.y] = 2
                         if self.grid[next_cell.x][next_cell.y] == -1:
@@ -209,5 +210,20 @@ class minSweeper:
 
 
 if __name__ == '__main__':
-    test = minSweeper("16_40.npy")
-    test.game()
+    d = 20
+    rate = np.arange(0, 0.38, 0.02)
+    result = []
+    for r in rate:
+        print(r)
+        n = d * d * r
+        map = ev.initial_environment(d,int(n))
+        test = minSweeper(map, n)
+        res = test.game()
+        result.append(res)
+
+    pl.plot(rate, result)
+    pl.title("Mine density vs Final score")
+    pl.xlabel("Mine density")
+    pl.xlabel("Final score")
+    pl.axis([0, rate[(len(rate) - 1)], 0, 1.2])
+    pl.show()

@@ -26,7 +26,7 @@ def initial_environment(d, n):
                                 counter += 1
                 map[i][j] = counter
 
-    np.save("./%s_%s.npy" % (d, n), map)
+    # np.save("./%s_%s.npy" % (d, n), map)
     return map
 
 if __name__ == '__main__':
