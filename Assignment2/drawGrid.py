@@ -32,11 +32,11 @@ def drawGrid(reveal_matrix):
         for i in range(gridHeight):
             for j in range(gridWidth):
                 if gridlist[i * gridWidth + j] == '*':
-                    flag = pygame.image.load('./pic/flag_red.png')
+                    flag = pygame.image.load('./img/flag_red.png')
                     pygame.draw.rect(surface, GREEN, [(gap + size) * j + gap, (gap + size) * i + gap, size, size])
                     surface.blit(flag,((gap + size) * j + gap,(gap + size) * i + gap))
                 elif gridlist[i * gridWidth + j] == "W":
-                    flag = pygame.image.load('./pic/bomb.png')
+                    flag = pygame.image.load('./img/bomb.png')
                     pygame.draw.rect(surface, RED, [(gap + size) * j + gap, (gap + size) * i + gap, size, size])
                     surface.blit(flag,((gap + size) * j + 4,(gap + size) * i + 5))
                 elif gridlist[i * gridWidth + j] == "0":
