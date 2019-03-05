@@ -147,8 +147,10 @@ class minSweeper:
         # find a start point to start;
         # x = random.randint(0, self.d - 1)
         # y = random.randint(0, self.d - 1)
-        x = 5
-        y = 1
+        #
+        # print(x, y)
+        x = 3
+        y = 8
         num = self.grid[x][y]
         if (num == -1):
             print("boom!")
@@ -191,7 +193,7 @@ class minSweeper:
                     print("Into Guess Part; Guess(%s, %s) as next cell" % (next_cell.x, next_cell.y))
                     self.to_be_revealed.pop(next_index)
                     self.visited[next_cell.x][next_cell.y] = 2
-                    if self.grid[next_cell.x][next_cell.y] == "-1":
+                    if self.grid[next_cell.x][next_cell.y] == -1:
                         self.reveal[next_cell.x][next_cell.y] = "W"
                     else:
                         self.reveal[next_cell.x][next_cell.y] = self.grid[next_cell.x][next_cell.y]
