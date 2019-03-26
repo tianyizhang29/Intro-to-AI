@@ -234,8 +234,8 @@ if __name__ == '__main__':
     # pl.xlabel("Final score")
     # pl.axis([0, rate[(len(rate) - 1)], 0, 1.2])
     # pl.show()
-    d = 20
-    rate = 0.15
+    d = 15
+    rate = 0.2
     n = d * d * rate
     map = ev.initial_environment(d,int(n))
     test = minSweeper(map, n)
