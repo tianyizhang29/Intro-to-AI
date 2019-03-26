@@ -1,0 +1,6 @@
+
+# python compiled code files 
+*.pyc
+
+# configuration of IDEA
+.idea
