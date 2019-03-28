@@ -1,10 +1,14 @@
 import map
 import numpy as np
+import random
 
 class Solution:
     def __init__(self, terrian):
         self.terrian = terrian
+        self.width = terrian.width
+        self.length = terrian.length
         self.belief = terrian.belief
+        self.tgt_pos = terrian.target_location
         self.can_not_found = {"flat":0.1, "hilly":0.3, "forested":0.5, "caves":0.9}
 
     def update_belief(self, not_found_pos, pos):
@@ -22,4 +26,40 @@ class Solution:
 
         self.belief[xi][yi] = poss_t_in_pos_before / poss_not_fd
     
-    
+    def search(self):
+        x, y = random.randint(0, self.width - 1), random.randint(0, self.length - 1)
+        count = 0
+
+        while(True):
+            count += 1
+            max_poss = 0
+            max_i = 0
+            max_j = 0
+            if (x, y) == self.tgt_pos:
+                terrian_type = self.terrian.get_terrian_type(x, y)
+                cannot_found_poss = self.can_not_found[terrian_type]
+                dice = random.random()
+                # target exists in (x,y), but cannot found.
+                if dice < cannot_found_poss:
+                    for i in range(self.width):
+                        for j in range(self.length):
+                            self.update_belief((x, y), (i, j))
+                            if self.belief[i][j] > max_poss:
+                                max_i = i
+                                max_j = j
+                # target exists in (x,y), and found it
+                else:
+                    return count
+            else:
+                self.belief[x][y] = 0
+                # target is not in this position, update belief matrix.
+                for i in range(self.width):
+                    for j in range(self.length):
+                        self.update_belief((x, y), (i, j))
+                        if self.belief[i][j] > max_poss:
+                            max_i = i
+                            max_j = j
+            
+            # found the postion with max probability of contains target.
+            x = max_i
+            y = max_j
