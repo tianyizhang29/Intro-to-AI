@@ -1,10 +1,14 @@
 import numpy as np
+import random
 
-class Grid:
+terrian_type = {1:"flat", 2:"hilly", 3:"forested", 4:"caves"}
+
+class Map:
     def __init__(self, width, length):
         self.width = width
         self.length = length
-        self.grid = self.generate()
+        self.grid, self.belief = self.generate()
+        self.target_location = (random.randint(0, self.width - 1), random.randint(0, self.length - 1))
     
     def generate(self):
         total = self.width * self.length
@@ -20,4 +24,11 @@ class Grid:
                 grid[i] = 4
         np.random.shuffle(grid)
         grid = np.reshape(grid, (self.width, self.length))
-        return grid
+        return grid, np.full((self.width, self.length), 1 / total)
+
+    def get_terrian_type(self, x, y):
+        return terrian_type[(self.grid[x][y])]
+
+map = Map(50, 50)
+print(map.belief)
+
