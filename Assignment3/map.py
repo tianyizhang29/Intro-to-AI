@@ -28,7 +28,3 @@ class Map:
 
     def get_terrian_type(self, x, y):
         return terrian_type[(self.grid[x][y])]
-
-map = Map(50, 50)
-print(map.belief)
-
