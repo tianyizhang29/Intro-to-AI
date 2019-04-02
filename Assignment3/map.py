@@ -13,7 +13,7 @@ class Map:
     
     def generate(self):
         total = self.width * self.length
-        grid = np.zeros(total)
+        grid = np.zeros(total,dtype='int64')
         for i in range(total):
             if i < total * 0.2:
                 grid[i] = 1
