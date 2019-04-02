@@ -1,7 +1,6 @@
 import map
 import numpy as np
 import random
-import matplotlib.pyplot as plt
 import sys
 
 sys.setrecursionlimit(3000)
