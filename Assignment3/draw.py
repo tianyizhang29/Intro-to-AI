@@ -17,5 +17,5 @@ for i in range(20):
 # plt.plot(x, data[1], label='Target found in cell')
 # plt.legend(loc='upper right')
 # plt.show()
-x = [1,2]
-print(x == [1,2])
+x = [[1,2]]
+print([1,2] in x)
