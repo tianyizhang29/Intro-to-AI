@@ -1,0 +1,11 @@
+
+# python compiled code files 
+*.pyc
+
+# configuration of IDEA
+.idea
+
+#configuration of macOS
+.DS_Store
+
+*.npy
