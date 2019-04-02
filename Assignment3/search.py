@@ -190,6 +190,8 @@ class Solution:
                     print('found!!!')
                     return count
             else:
+                if (len(q1) != 0 and len(q2) == 0):
+                    q1.pop(0)
                 hint.sort()
                 if hint1_new.__eq__(''):
                     hint1_new = terrian_type[hint[0]]
@@ -240,9 +242,10 @@ class Solution:
     def get_adjacent_same_cell(self, curr_queue, terr_type):
         adjacnet_queue = []
         for c in curr_queue:
+            print(c)
             for chg in change:
-                new_i = c[0] + chg[0]
-                new_j = c[1] + chg[1]
+                new_i = int(c[0]) + int(chg[0])
+                new_j = int(c[1]) + int(chg[1])
                 if new_i >= 0 and new_i < self.width and new_j >= 0 and new_j < self.length:
                     if self.terrian.grid[new_i][new_j] == terr_type and not [new_i, new_j] in adjacnet_queue:
                         adjacnet_queue.append([new_i, new_j])
