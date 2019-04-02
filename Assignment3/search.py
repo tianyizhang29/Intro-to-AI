@@ -6,6 +6,7 @@ import sys
 
 sys.setrecursionlimit(3000)
 change = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+terrian_type = {1:"flat", 2:"hilly", 3:"forested", 4:"caves"}
 
 class Solution:
     def __init__(self, terrian):
@@ -159,6 +160,14 @@ class Solution:
 
         while True:
             count += 1
+            q1 = [] # q1记录Hint1
+            q1_type = ''
+            q2 = [] # q2记录Hint2
+            q2_type = ''
+            hint1_old = ''
+            hint2_old = ''
+            hint1_new = ''
+            hint2_new = ''
             terrian_type = self.terrian.get_terrian_type(x, y)
             cannot_found_poss = self.can_not_found[terrian_type]
             if [x, y] == self.tgt_pos:
@@ -170,8 +179,20 @@ class Solution:
                     return count
             else:
                 hint = self.terrian.move_target()
-                hint_type1 = self.can_not_found[hint[0]]
-                hint_type2 = self.can_not_found[hint[1]]
+                hint.sort()
+                if hint1_new.__eq__(''):
+                    hint1_new = terrian_type[hint[0]]
+                    hint2_new = terrian_type[hint[1]] #hint2_old is num
+                else:
+                    hint1_old = hint1_new
+                    hint2_old = hint2_new
+                    hint1_new = terrian_type[hint[0]]
+                    hint2_new = terrian_type[hint[1]]
+                if (not hint1_old.__eq__(hint1_new)) or (not hint2_old.__eq__(hint2_new)): # could find the destination
+                    if hint1_old.__eq__(hint1_new): #hint1 is the start point
+                        if hint1_new.__eq__(q1_type):
+                            q1[]
+
 
 
 def takeSecond(elem):
