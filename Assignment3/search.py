@@ -6,6 +6,7 @@ import sys
 
 sys.setrecursionlimit(3000)
 change = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+terrian_type = {1:"flat", 2:"hilly", 3:"forested", 4:"caves"}
 
 class Solution:
     def __init__(self, terrian):
@@ -170,9 +171,16 @@ class Solution:
                     return count
             else:
                 hint = self.terrian.move_target()
-                hint_type1 = self.can_not_found[hint[0]]
-                hint_type2 = self.can_not_found[hint[1]]
+                hint_type1 = self.terrian_type[hint[0]]
+                hint_type2 = self.terrian_type[hint[1]]
 
+    def get_same_cell(self, terr_type):
+
+        tpye_idx = self.terrian_type[terr_type]
+        queue = []
+        for i in range(self.width):
+            for j in range(self.length):
+                if self.terrian.grid[i][j] == terrian_type:
 
 def takeSecond(elem):
     return elem[1]
