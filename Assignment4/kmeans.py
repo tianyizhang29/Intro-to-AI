@@ -11,7 +11,7 @@ import math
 import random
 import sys
 
-class KMeansPP(object):
+class KMeans(object):
     """ K-Means++ clustering algorithm class """
 
     def __init__(self, datas):
@@ -33,9 +33,9 @@ class KMeansPP(object):
             __dist_max = 0
             for di, d in enumerate(self.__datas):
                 __ = math.sqrt(
-                        (d[0] - self.__datas[__popped][0])**2 +
-                        (d[1] - self.__datas[__popped][1])**2 +
-                        (d[2] - self.__datas[__popped][2])**2)
+                        (int(d[0]) - int(self.__datas[__popped][0]))**2 +
+                        (int(d[1]) - int(self.__datas[__popped][1]))**2 +
+                        (int(d[2]) - int(self.__datas[__popped][2]))**2)
                 __dists.append((__, di))
             _new_dists = sorted(__dists, key=lambda x:int(x[0]), reverse=True)
             __new_dists = [x for x in _new_dists if x[0] < __MAX_DIST/3]
@@ -55,9 +55,9 @@ class KMeansPP(object):
             __pos = 0
             for ri, r in enumerate(self.__results):
                 __ = math.sqrt(
-                        (d[0] - r[0])**2 +
-                        (d[1] - r[1])**2 +
-                        (d[2] - r[2])**2)
+                        (int(d[0]) - int(r[0]))**2 +
+                        (int(d[1]) - int(r[1]))**2 +
+                        (int(d[2]) - int(r[2]))**2)
                 if __ < __dist:
                     __dist = __
                     __pos = ri
@@ -100,7 +100,7 @@ class KMeansPP(object):
     def run(self, k):
         self.__k = k
         self.__initialization()
-        print("DEBUG kmeanspp.py: 1st __results => {0}".format(self.__results))
+        print("DEBUG kmeans.py: 1st __results => {0}".format(self.__results))
         while True:
             self.__justbefore = copy.deepcopy(self.__results)
             self.__classification()
@@ -122,16 +122,19 @@ if __name__ == '__main__':
     #     print("Usage: $ python KMeansPP.py <input> <output>")
     #     sys.exit(-1)
     # print("input => {0}, output => {1}".format(sys.argv[1], sys.argv[2]))
-    datas = [
-            (0, 255, 255),
-            (127, 255, 255),
-            (255, 255, 0),
-            (255, 127, 0),
-            (255, 127, 255),
-            (255, 0,   255),
-            (127, 127, 127),
-            (255, 255, 255),]
-    kmpp = KMeansPP(datas)
+    # datas = [
+    #         (0, 255, 255),
+    #         (127, 255, 255),
+    #         (255, 255, 0),
+    #         (255, 127, 0),
+    #         (255, 127, 255),
+    #         (255, 0,   255),
+    #         (127, 127, 127),
+    #         (255, 255, 255),]
+    # datas = [(1,1,1),(2,2,2),(255,200,200),(200,200,200)]
+
+    datas = [[1,1,1],[2,2,2],[255,200,200],[200,200,200]]
+    kmpp = KMeans(datas)
     kmpp.run(2)
     print("kmpp.results => {0}".format(kmpp.results))
     print("kmpp.assign => {0}".format(kmpp.assign))
