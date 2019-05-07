@@ -73,9 +73,11 @@ class mapping_color:
 
 
     def learn_img(self, gray_to_color, color_img, gray_img):
-        for i in range(self.img_size):
-            for j in range(self.img_size):
-                pixel_gray = gray_img[i][j][0]
+        for i in range(1,self.img_size-1):
+            for j in range(1,self.img_size-1):
+                pixel_gray = (gray_img[i - 1][j - 1][0] + gray_img[i - 1][j][0] + gray_img[i - 1][j + 1][0] + \
+                             gray_img[i][j - 1][0] + gray_img[i][j][0] + gray_img[i][j + 1][0] + \
+                             gray_img[i + 1][j - 1][0] + gray_img[i + 1][j][0] + gray_img[i + 1][j + 1][0]) // 9
                 pixel_color = color_img[i][j]
                 nearest_color = self.find_nearest_color(pixel_color)
                 nearest_color_value = self.encode_color(nearest_color)
